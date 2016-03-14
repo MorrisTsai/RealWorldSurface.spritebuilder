@@ -14,6 +14,10 @@
 @property int maxHp;
 @property int speed;
 @property int ammunition;
+@property BOOL doubleJump;
+@property BOOL invincible;
+@property BOOL boostSpeed;
+@property BOOL powerRege;
 @property CCSprite* myView;
 
 

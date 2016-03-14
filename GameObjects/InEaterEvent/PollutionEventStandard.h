@@ -11,6 +11,6 @@
 #import "StandCreature.h"
 
 @interface PollutionEventStandard : StandardGameObject
-- (instancetype)initWithSize:(CGSize)size;
+- (instancetype)initWithSize:(CGSize)size andNumber:(int)numbers;
 - (BOOL)creatrueCollide:(StandCreature*)creature;
 @end

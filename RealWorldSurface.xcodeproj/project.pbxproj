@@ -83,6 +83,8 @@
 		A55E6ADB1C941F40006F0FE5 /* Dead_Fish.png in Resources */ = {isa = PBXBuildFile; fileRef = A55E6AD91C941F40006F0FE5 /* Dead_Fish.png */; };
 		A55E6ADC1C941F40006F0FE5 /* Mud_Fish.png in Resources */ = {isa = PBXBuildFile; fileRef = A55E6ADA1C941F40006F0FE5 /* Mud_Fish.png */; };
 		A55E6AEE1C944B67006F0FE5 /* StandCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E6AED1C944B67006F0FE5 /* StandCreature.m */; };
+		A55E6B0E1C963EEB006F0FE5 /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E6B0D1C963EEB006F0FE5 /* MenuScene.m */; };
+		A55E6B121C96644D006F0FE5 /* StageModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E6B111C96644D006F0FE5 /* StageModels.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -221,6 +223,11 @@
 		A55E6ADA1C941F40006F0FE5 /* Mud_Fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mud_Fish.png; sourceTree = "<group>"; };
 		A55E6AEC1C944B67006F0FE5 /* StandCreature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandCreature.h; sourceTree = "<group>"; };
 		A55E6AED1C944B67006F0FE5 /* StandCreature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandCreature.m; sourceTree = "<group>"; };
+		A55E6B0C1C963EEB006F0FE5 /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScene.h; sourceTree = "<group>"; };
+		A55E6B0D1C963EEB006F0FE5 /* MenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuScene.m; sourceTree = "<group>"; };
+		A55E6B101C96644D006F0FE5 /* StageModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageModels.h; sourceTree = "<group>"; };
+		A55E6B111C96644D006F0FE5 /* StageModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageModels.m; sourceTree = "<group>"; };
+		A55E6B141C9664E7006F0FE5 /* VSConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VSConstant.h; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -554,6 +561,32 @@
 			path = Creatures;
 			sourceTree = "<group>";
 		};
+		A55E6B091C963ECF006F0FE5 /* MenuScene */ = {
+			isa = PBXGroup;
+			children = (
+				A55E6B0C1C963EEB006F0FE5 /* MenuScene.h */,
+				A55E6B0D1C963EEB006F0FE5 /* MenuScene.m */,
+			);
+			path = MenuScene;
+			sourceTree = "<group>";
+		};
+		A55E6B0F1C96643C006F0FE5 /* StageModels */ = {
+			isa = PBXGroup;
+			children = (
+				A55E6B101C96644D006F0FE5 /* StageModels.h */,
+				A55E6B111C96644D006F0FE5 /* StageModels.m */,
+			);
+			path = StageModels;
+			sourceTree = "<group>";
+		};
+		A55E6B131C9664C3006F0FE5 /* VSConstant */ = {
+			isa = PBXGroup;
+			children = (
+				A55E6B141C9664E7006F0FE5 /* VSConstant.h */,
+			);
+			path = VSConstant;
+			sourceTree = "<group>";
+		};
 		B737893C1807616C0076A88C /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -589,6 +622,9 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
+				A55E6B131C9664C3006F0FE5 /* VSConstant */,
+				A55E6B0F1C96643C006F0FE5 /* StageModels */,
+				A55E6B091C963ECF006F0FE5 /* MenuScene */,
 				A55E6ABA1C93DCE5006F0FE5 /* Resources */,
 				A55E69861C93DAC3006F0FE5 /* GameMainController */,
 				A55E697D1C93DA1A006F0FE5 /* GameObjects */,
@@ -961,7 +997,9 @@
 				A55E69851C93DA53006F0FE5 /* RunningCharacter.m in Sources */,
 				A55E6AD81C941509006F0FE5 /* StandardGameObject.m in Sources */,
 				A55E695B1C90FB0D006F0FE5 /* GameMainScene.m in Sources */,
+				A55E6B121C96644D006F0FE5 /* StageModels.m in Sources */,
 				A55E6AD21C9413CD006F0FE5 /* PollutionStandard.m in Sources */,
+				A55E6B0E1C963EEB006F0FE5 /* MenuScene.m in Sources */,
 				A55E69891C93DAD0006F0FE5 /* GameMainController.m in Sources */,
 				A55E69821C93DA29006F0FE5 /* StandardObstacle.m in Sources */,
 			);

@@ -28,7 +28,7 @@
 #import "AppDelegate.h"
 #import "CCBuilderReader.h"
 #import "GameMainScene.h"
-
+#import "MenuScene.h"
 @implementation AppController
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -60,7 +60,7 @@
 
 - (CCScene*) startScene
 {
-    return [GameMainScene node];
+    return [MenuScene node];
     //return [CCBReader loadAsScene:@"GameMainScene"];
 }
 

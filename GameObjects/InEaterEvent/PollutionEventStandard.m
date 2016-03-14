@@ -15,10 +15,11 @@
     NSMutableArray* pollutionNodes;
     NSMutableArray* swipeNodes;
     CCDrawNode* drawNode;
+    int pNumbers;;
     CGPoint prevPoint;
 }
 
-- (instancetype)initWithSize:(CGSize)size;
+- (instancetype)initWithSize:(CGSize)size andNumber:(int)numbers;
 {
     self = [super init];
     if (self) {
@@ -27,6 +28,7 @@
         prevPoint = CGPointZero;
         [self addChild:drawNode];
         self.anchorPoint = ccp(0.5, 0.5);
+        pNumbers = numbers;
         pollutionNodes = [NSMutableArray array];
       //  [self setUserInteractionEnabled:YES];
          
@@ -92,7 +94,7 @@
 }
 -(void)buildPollutionView
 {
-    for(int i = 0; i < 5; i ++)
+    for(int i = 0; i < pNumbers; i ++)
     {
         PollutionStandard* pollution = [[PollutionStandard alloc]initWithSize:CGSizeMake(10, 10)];
         [self addChild:pollution];

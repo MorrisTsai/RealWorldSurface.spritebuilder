@@ -22,5 +22,15 @@
     }
     return self;
 }
-
+-(void)initCharacterData;
+{
+    self.maxHp = 3;
+    self.hp = self.maxHp;
+    self.speed = 1;
+    self.ammunition = 10;
+    self.doubleJump = YES;
+    self.invincible = NO;
+    self.boostSpeed = NO;
+    self.powerRege = NO;
+}
 @end
