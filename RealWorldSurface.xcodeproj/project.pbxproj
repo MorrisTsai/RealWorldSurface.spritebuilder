@@ -85,6 +85,22 @@
 		A55E6AEE1C944B67006F0FE5 /* StandCreature.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E6AED1C944B67006F0FE5 /* StandCreature.m */; };
 		A55E6B0E1C963EEB006F0FE5 /* MenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E6B0D1C963EEB006F0FE5 /* MenuScene.m */; };
 		A55E6B121C96644D006F0FE5 /* StageModels.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E6B111C96644D006F0FE5 /* StageModels.m */; };
+		A55E6B171C9674D2006F0FE5 /* StageChooseScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E6B161C9674D2006F0FE5 /* StageChooseScene.m */; };
+		A55E6B1A1C9674E9006F0FE5 /* BigStageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E6B191C9674E9006F0FE5 /* BigStageLayer.m */; };
+		A55E6B1D1C9674F9006F0FE5 /* SubStageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E6B1C1C9674F9006F0FE5 /* SubStageLayer.m */; };
+		A5A191901C9A345C0056C979 /* bama.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A1918F1C9A345C0056C979 /* bama.png */; };
+		A5A191B41C9D3D110056C979 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191A81C9D3D110056C979 /* Background.png */; };
+		A5A191B51C9D3D110056C979 /* cloud_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191A91C9D3D110056C979 /* cloud_1.png */; };
+		A5A191B61C9D3D110056C979 /* cloud_2.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191AA1C9D3D110056C979 /* cloud_2.png */; };
+		A5A191B71C9D3D110056C979 /* cloud_3.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191AB1C9D3D110056C979 /* cloud_3.png */; };
+		A5A191B81C9D3D110056C979 /* ocean-part.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191AC1C9D3D110056C979 /* ocean-part.png */; };
+		A5A191B91C9D3D110056C979 /* surfer.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191AD1C9D3D110056C979 /* surfer.png */; };
+		A5A191BA1C9D3D110056C979 /* SURV.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191AE1C9D3D110056C979 /* SURV.png */; };
+		A5A191BB1C9D3D110056C979 /* VIC.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191AF1C9D3D110056C979 /* VIC.png */; };
+		A5A191BC1C9D3D110056C979 /* Water_drop_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191B01C9D3D110056C979 /* Water_drop_1.png */; };
+		A5A191BD1C9D3D110056C979 /* Water_drop_2.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191B11C9D3D110056C979 /* Water_drop_2.png */; };
+		A5A191BE1C9D3D110056C979 /* Water_drop_3.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191B21C9D3D110056C979 /* Water_drop_3.png */; };
+		A5A191BF1C9D3D110056C979 /* Water_drop_4.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191B31C9D3D110056C979 /* Water_drop_4.png */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -228,6 +244,25 @@
 		A55E6B101C96644D006F0FE5 /* StageModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageModels.h; sourceTree = "<group>"; };
 		A55E6B111C96644D006F0FE5 /* StageModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageModels.m; sourceTree = "<group>"; };
 		A55E6B141C9664E7006F0FE5 /* VSConstant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VSConstant.h; sourceTree = "<group>"; };
+		A55E6B151C9674D2006F0FE5 /* StageChooseScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageChooseScene.h; sourceTree = "<group>"; };
+		A55E6B161C9674D2006F0FE5 /* StageChooseScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageChooseScene.m; sourceTree = "<group>"; };
+		A55E6B181C9674E9006F0FE5 /* BigStageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BigStageLayer.h; sourceTree = "<group>"; };
+		A55E6B191C9674E9006F0FE5 /* BigStageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigStageLayer.m; sourceTree = "<group>"; };
+		A55E6B1B1C9674F9006F0FE5 /* SubStageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubStageLayer.h; sourceTree = "<group>"; };
+		A55E6B1C1C9674F9006F0FE5 /* SubStageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubStageLayer.m; sourceTree = "<group>"; };
+		A5A1918F1C9A345C0056C979 /* bama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bama.png; sourceTree = "<group>"; };
+		A5A191A81C9D3D110056C979 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
+		A5A191A91C9D3D110056C979 /* cloud_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud_1.png; sourceTree = "<group>"; };
+		A5A191AA1C9D3D110056C979 /* cloud_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud_2.png; sourceTree = "<group>"; };
+		A5A191AB1C9D3D110056C979 /* cloud_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud_3.png; sourceTree = "<group>"; };
+		A5A191AC1C9D3D110056C979 /* ocean-part.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ocean-part.png"; sourceTree = "<group>"; };
+		A5A191AD1C9D3D110056C979 /* surfer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = surfer.png; sourceTree = "<group>"; };
+		A5A191AE1C9D3D110056C979 /* SURV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SURV.png; sourceTree = "<group>"; };
+		A5A191AF1C9D3D110056C979 /* VIC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VIC.png; sourceTree = "<group>"; };
+		A5A191B01C9D3D110056C979 /* Water_drop_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water_drop_1.png; sourceTree = "<group>"; };
+		A5A191B11C9D3D110056C979 /* Water_drop_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water_drop_2.png; sourceTree = "<group>"; };
+		A5A191B21C9D3D110056C979 /* Water_drop_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water_drop_3.png; sourceTree = "<group>"; };
+		A5A191B31C9D3D110056C979 /* Water_drop_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water_drop_4.png; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -525,6 +560,8 @@
 		A55E6ABA1C93DCE5006F0FE5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5A191A71C9D3D110056C979 /* Meng final VIC SURV */,
+				A5A1918F1C9A345C0056C979 /* bama.png */,
 				A55E6AD91C941F40006F0FE5 /* Dead_Fish.png */,
 				A55E6ADA1C941F40006F0FE5 /* Mud_Fish.png */,
 				A55E6ABB1C93DCE5006F0FE5 /* ab.png */,
@@ -566,6 +603,12 @@
 			children = (
 				A55E6B0C1C963EEB006F0FE5 /* MenuScene.h */,
 				A55E6B0D1C963EEB006F0FE5 /* MenuScene.m */,
+				A55E6B151C9674D2006F0FE5 /* StageChooseScene.h */,
+				A55E6B161C9674D2006F0FE5 /* StageChooseScene.m */,
+				A55E6B181C9674E9006F0FE5 /* BigStageLayer.h */,
+				A55E6B191C9674E9006F0FE5 /* BigStageLayer.m */,
+				A55E6B1B1C9674F9006F0FE5 /* SubStageLayer.h */,
+				A55E6B1C1C9674F9006F0FE5 /* SubStageLayer.m */,
 			);
 			path = MenuScene;
 			sourceTree = "<group>";
@@ -585,6 +628,25 @@
 				A55E6B141C9664E7006F0FE5 /* VSConstant.h */,
 			);
 			path = VSConstant;
+			sourceTree = "<group>";
+		};
+		A5A191A71C9D3D110056C979 /* Meng final VIC SURV */ = {
+			isa = PBXGroup;
+			children = (
+				A5A191A81C9D3D110056C979 /* Background.png */,
+				A5A191A91C9D3D110056C979 /* cloud_1.png */,
+				A5A191AA1C9D3D110056C979 /* cloud_2.png */,
+				A5A191AB1C9D3D110056C979 /* cloud_3.png */,
+				A5A191AC1C9D3D110056C979 /* ocean-part.png */,
+				A5A191AD1C9D3D110056C979 /* surfer.png */,
+				A5A191AE1C9D3D110056C979 /* SURV.png */,
+				A5A191AF1C9D3D110056C979 /* VIC.png */,
+				A5A191B01C9D3D110056C979 /* Water_drop_1.png */,
+				A5A191B11C9D3D110056C979 /* Water_drop_2.png */,
+				A5A191B21C9D3D110056C979 /* Water_drop_3.png */,
+				A5A191B31C9D3D110056C979 /* Water_drop_4.png */,
+			);
+			path = "Meng final VIC SURV";
 			sourceTree = "<group>";
 		};
 		B737893C1807616C0076A88C /* Source */ = {
@@ -892,14 +954,24 @@
 				A55E6ACE1C93DCE5006F0FE5 /* Triangle.png in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
+				A5A191B91C9D3D110056C979 /* surfer.png in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
+				A5A191B41C9D3D110056C979 /* Background.png in Resources */,
+				A5A191B71C9D3D110056C979 /* cloud_3.png in Resources */,
 				A55E6ACD1C93DCE5006F0FE5 /* Rectangle.png in Resources */,
 				A55E6ADB1C941F40006F0FE5 /* Dead_Fish.png in Resources */,
+				A5A191B61C9D3D110056C979 /* cloud_2.png in Resources */,
+				A5A191BB1C9D3D110056C979 /* VIC.png in Resources */,
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
+				A5A191BD1C9D3D110056C979 /* Water_drop_2.png in Resources */,
+				A5A191B51C9D3D110056C979 /* cloud_1.png in Resources */,
+				A5A191BC1C9D3D110056C979 /* Water_drop_1.png in Resources */,
 				A55E6ADC1C941F40006F0FE5 /* Mud_Fish.png in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
+				A5A191BA1C9D3D110056C979 /* SURV.png in Resources */,
+				A5A191BF1C9D3D110056C979 /* Water_drop_4.png in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
 				A55E6AC61C93DCE5006F0FE5 /* bg1.png in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
@@ -912,9 +984,12 @@
 				A55E6ACB1C93DCE5006F0FE5 /* Hexgon.png in Resources */,
 				A55E6AC51C93DCE5006F0FE5 /* ab.png in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
+				A5A191901C9A345C0056C979 /* bama.png in Resources */,
 				A55E6AC71C93DCE5006F0FE5 /* bg2.png in Resources */,
 				B7378977180762440076A88C /* Default.png in Resources */,
 				B71F5911188484E7003F4D28 /* iPad-old.png in Resources */,
+				A5A191B81C9D3D110056C979 /* ocean-part.png in Resources */,
+				A5A191BE1C9D3D110056C979 /* Water_drop_3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -991,8 +1066,10 @@
 			files = (
 				B73789871807631A0076A88C /* main.m in Sources */,
 				A55E6AEE1C944B67006F0FE5 /* StandCreature.m in Sources */,
+				A55E6B1A1C9674E9006F0FE5 /* BigStageLayer.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
+				A55E6B1D1C9674F9006F0FE5 /* SubStageLayer.m in Sources */,
 				A55E6AD51C941411006F0FE5 /* PollutionEventStandard.m in Sources */,
 				A55E69851C93DA53006F0FE5 /* RunningCharacter.m in Sources */,
 				A55E6AD81C941509006F0FE5 /* StandardGameObject.m in Sources */,
@@ -1001,6 +1078,7 @@
 				A55E6AD21C9413CD006F0FE5 /* PollutionStandard.m in Sources */,
 				A55E6B0E1C963EEB006F0FE5 /* MenuScene.m in Sources */,
 				A55E69891C93DAD0006F0FE5 /* GameMainController.m in Sources */,
+				A55E6B171C9674D2006F0FE5 /* StageChooseScene.m in Sources */,
 				A55E69821C93DA29006F0FE5 /* StandardObstacle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1284,7 +1362,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: MENG LIN TSAI (Y3V74E4LY6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: MENG LIN TSAI (Y3V74E4LY6)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1319,7 +1397,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: MENG LIN TSAI (Y3V74E4LY6)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: MENG LIN TSAI (Y3V74E4LY6)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

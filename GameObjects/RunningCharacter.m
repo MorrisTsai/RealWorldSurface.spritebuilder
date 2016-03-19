@@ -13,7 +13,8 @@
 {
     self = [super init];
     if (self) {
-        self.myView = [CCSprite spriteWithImageNamed:@"Circle.png"];
+        self.myView = [CCSprite spriteWithImageNamed:@"bama.png"];
+        self.myView.flipX = YES;
         [self addChild:self.myView];
          self.contentSize = CGSizeMake(25, 25);
         self.myView.scale = 25/self.myView.contentSize.width;

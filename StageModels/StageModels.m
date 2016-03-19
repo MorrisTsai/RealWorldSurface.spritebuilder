@@ -40,7 +40,6 @@
 }
 -(int)pollutionConstant
 {
-    
     return  20 - sqrt(min+ max);
 }
 -(int)randNumberOfPOllutionNumbers
