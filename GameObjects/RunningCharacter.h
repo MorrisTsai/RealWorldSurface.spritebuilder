@@ -20,5 +20,5 @@
 @property BOOL powerRege;
 @property CCSprite* myView;
 
-
+- (instancetype)initWithSize:(CGSize)size;
 @end

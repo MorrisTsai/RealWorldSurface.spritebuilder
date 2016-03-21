@@ -88,6 +88,8 @@
 		A55E6B171C9674D2006F0FE5 /* StageChooseScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E6B161C9674D2006F0FE5 /* StageChooseScene.m */; };
 		A55E6B1A1C9674E9006F0FE5 /* BigStageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E6B191C9674E9006F0FE5 /* BigStageLayer.m */; };
 		A55E6B1D1C9674F9006F0FE5 /* SubStageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E6B1C1C9674F9006F0FE5 /* SubStageLayer.m */; };
+		A57AA78A1C9F5F3B00F6540A /* GroundObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A57AA7891C9F5F3B00F6540A /* GroundObject.m */; };
+		A57AA78E1C9F693500F6540A /* UILayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A57AA78D1C9F693500F6540A /* UILayer.m */; };
 		A5A191901C9A345C0056C979 /* bama.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A1918F1C9A345C0056C979 /* bama.png */; };
 		A5A191B41C9D3D110056C979 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191A81C9D3D110056C979 /* Background.png */; };
 		A5A191B51C9D3D110056C979 /* cloud_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191A91C9D3D110056C979 /* cloud_1.png */; };
@@ -250,6 +252,10 @@
 		A55E6B191C9674E9006F0FE5 /* BigStageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BigStageLayer.m; sourceTree = "<group>"; };
 		A55E6B1B1C9674F9006F0FE5 /* SubStageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubStageLayer.h; sourceTree = "<group>"; };
 		A55E6B1C1C9674F9006F0FE5 /* SubStageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubStageLayer.m; sourceTree = "<group>"; };
+		A57AA7881C9F5F3B00F6540A /* GroundObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroundObject.h; sourceTree = "<group>"; };
+		A57AA7891C9F5F3B00F6540A /* GroundObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundObject.m; sourceTree = "<group>"; };
+		A57AA78C1C9F693500F6540A /* UILayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILayer.h; sourceTree = "<group>"; };
+		A57AA78D1C9F693500F6540A /* UILayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILayer.m; sourceTree = "<group>"; };
 		A5A1918F1C9A345C0056C979 /* bama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bama.png; sourceTree = "<group>"; };
 		A5A191A81C9D3D110056C979 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		A5A191A91C9D3D110056C979 /* cloud_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud_1.png; sourceTree = "<group>"; };
@@ -526,6 +532,7 @@
 		A55E69541C90FAFD006F0FE5 /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
+				A57AA78B1C9F692A00F6540A /* UILayer */,
 				A55E69591C90FB0D006F0FE5 /* GameMainScene.h */,
 				A55E695A1C90FB0D006F0FE5 /* GameMainScene.m */,
 			);
@@ -536,6 +543,7 @@
 		A55E697D1C93DA1A006F0FE5 /* GameObjects */ = {
 			isa = PBXGroup;
 			children = (
+				A57AA7851C9F5F2F00F6540A /* GroundObject */,
 				A55E6AE91C944B44006F0FE5 /* Creatures */,
 				A55E6ACF1C9413A0006F0FE5 /* InEaterEvent */,
 				A55E69801C93DA29006F0FE5 /* StandardObstacle.h */,
@@ -628,6 +636,24 @@
 				A55E6B141C9664E7006F0FE5 /* VSConstant.h */,
 			);
 			path = VSConstant;
+			sourceTree = "<group>";
+		};
+		A57AA7851C9F5F2F00F6540A /* GroundObject */ = {
+			isa = PBXGroup;
+			children = (
+				A57AA7881C9F5F3B00F6540A /* GroundObject.h */,
+				A57AA7891C9F5F3B00F6540A /* GroundObject.m */,
+			);
+			path = GroundObject;
+			sourceTree = "<group>";
+		};
+		A57AA78B1C9F692A00F6540A /* UILayer */ = {
+			isa = PBXGroup;
+			children = (
+				A57AA78C1C9F693500F6540A /* UILayer.h */,
+				A57AA78D1C9F693500F6540A /* UILayer.m */,
+			);
+			path = UILayer;
 			sourceTree = "<group>";
 		};
 		A5A191A71C9D3D110056C979 /* Meng final VIC SURV */ = {
@@ -1065,6 +1091,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B73789871807631A0076A88C /* main.m in Sources */,
+				A57AA78A1C9F5F3B00F6540A /* GroundObject.m in Sources */,
 				A55E6AEE1C944B67006F0FE5 /* StandCreature.m in Sources */,
 				A55E6B1A1C9674E9006F0FE5 /* BigStageLayer.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
@@ -1074,6 +1101,7 @@
 				A55E69851C93DA53006F0FE5 /* RunningCharacter.m in Sources */,
 				A55E6AD81C941509006F0FE5 /* StandardGameObject.m in Sources */,
 				A55E695B1C90FB0D006F0FE5 /* GameMainScene.m in Sources */,
+				A57AA78E1C9F693500F6540A /* UILayer.m in Sources */,
 				A55E6B121C96644D006F0FE5 /* StageModels.m in Sources */,
 				A55E6AD21C9413CD006F0FE5 /* PollutionStandard.m in Sources */,
 				A55E6B0E1C963EEB006F0FE5 /* MenuScene.m in Sources */,

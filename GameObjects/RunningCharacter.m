@@ -9,15 +9,15 @@
 #import "RunningCharacter.h"
 
 @implementation RunningCharacter
-- (instancetype)init
+- (instancetype)initWithSize:(CGSize)size
 {
     self = [super init];
     if (self) {
-        self.myView = [CCSprite spriteWithImageNamed:@"bama.png"];
-        self.myView.flipX = YES;
+        self.myView = [CCSprite spriteWithImageNamed:@"surfer.png"];
+       // self.myView.flipX = YES;
         [self addChild:self.myView];
-         self.contentSize = CGSizeMake(25, 25);
-        self.myView.scale = 25/self.myView.contentSize.width;
+        self.contentSize = size;//CGSizeMake(50, 50);
+        self.myView.scale = size.width/self.myView.contentSize.width;
         self.myView.position = ccp(self.contentSize.width/2, self.contentSize.height/2);
         self.anchorPoint = ccp(0.5, 0.5);
     }
