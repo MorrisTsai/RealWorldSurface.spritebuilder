@@ -13,15 +13,16 @@
     
 }
 
-- (instancetype)init
+- (instancetype)initWithSize:(CGSize)size
 {
     self = [super init];
     if (self) {
         self.hitted = NO;
         self.myView = [CCSprite spriteWithImageNamed:@"Rectangle.png"];
         [self addChild:self.myView];
+        self.contentSize = size;
       //  self.contentSize = self.myView.contentSize;
-        self.myView.scale = 15/self.myView.contentSize.width;
+        self.myView.scale = size.width/self.myView.contentSize.width;
         self.myView.position = ccp(self.contentSize.width/2, self.contentSize.height/2);
         self.anchorPoint = ccp(0.5, 0.5);
     }

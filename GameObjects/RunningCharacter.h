@@ -21,4 +21,5 @@
 @property CCSprite* myView;
 
 - (instancetype)initWithSize:(CGSize)size;
+- (void) jump;
 @end

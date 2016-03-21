@@ -13,4 +13,5 @@
 @property BOOL hitted;
 @property CCSprite* myView;
 
+- (instancetype)initWithSize:(CGSize)size;
 @end
