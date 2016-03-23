@@ -12,6 +12,7 @@
 @interface StandardObstacle : StandardGameObject
 @property BOOL hitted;
 @property CCSprite* myView;
+@property int damage;
 
 - (instancetype)initWithSize:(CGSize)size;
 @end

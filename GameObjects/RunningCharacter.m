@@ -32,6 +32,29 @@
 {
     [super onEnter];
     [self buildWaterDropAnimation];
+    [self initCharacterData];
+}
+
+-(void)damaged:(int)damage
+{
+    self.hp -= damage;
+    
+}
+-(void)healed:(int)heal
+{
+    self.hp += heal;
+}
+-(void)setHp:(int)hp
+{
+    _hp = hp;
+    if(hp < 0 )
+    {
+        _hp = 0;
+    }
+    else if (hp > self.maxHp)
+    {
+        _hp = self.maxHp;
+    }
 }
 -(void)buildWaterDropAnimation
 {

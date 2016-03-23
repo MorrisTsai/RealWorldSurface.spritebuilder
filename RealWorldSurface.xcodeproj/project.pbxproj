@@ -90,6 +90,8 @@
 		A55E6B1D1C9674F9006F0FE5 /* SubStageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E6B1C1C9674F9006F0FE5 /* SubStageLayer.m */; };
 		A57AA78A1C9F5F3B00F6540A /* GroundObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A57AA7891C9F5F3B00F6540A /* GroundObject.m */; };
 		A57AA78E1C9F693500F6540A /* UILayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A57AA78D1C9F693500F6540A /* UILayer.m */; };
+		A57AA7901C9FCA4500F6540A /* green-forest-and-hills-background_PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = A57AA78F1C9FCA4500F6540A /* green-forest-and-hills-background_PNG.png */; };
+		A57AA7931C9FCB5300F6540A /* StageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A57AA7921C9FCB5300F6540A /* StageCell.m */; };
 		A5A191901C9A345C0056C979 /* bama.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A1918F1C9A345C0056C979 /* bama.png */; };
 		A5A191B41C9D3D110056C979 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191A81C9D3D110056C979 /* Background.png */; };
 		A5A191B51C9D3D110056C979 /* cloud_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191A91C9D3D110056C979 /* cloud_1.png */; };
@@ -256,6 +258,9 @@
 		A57AA7891C9F5F3B00F6540A /* GroundObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundObject.m; sourceTree = "<group>"; };
 		A57AA78C1C9F693500F6540A /* UILayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UILayer.h; sourceTree = "<group>"; };
 		A57AA78D1C9F693500F6540A /* UILayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UILayer.m; sourceTree = "<group>"; };
+		A57AA78F1C9FCA4500F6540A /* green-forest-and-hills-background_PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-forest-and-hills-background_PNG.png"; sourceTree = "<group>"; };
+		A57AA7911C9FCB5300F6540A /* StageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageCell.h; sourceTree = "<group>"; };
+		A57AA7921C9FCB5300F6540A /* StageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageCell.m; sourceTree = "<group>"; };
 		A5A1918F1C9A345C0056C979 /* bama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bama.png; sourceTree = "<group>"; };
 		A5A191A81C9D3D110056C979 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		A5A191A91C9D3D110056C979 /* cloud_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud_1.png; sourceTree = "<group>"; };
@@ -568,6 +573,7 @@
 		A55E6ABA1C93DCE5006F0FE5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A57AA78F1C9FCA4500F6540A /* green-forest-and-hills-background_PNG.png */,
 				A5A191A71C9D3D110056C979 /* Meng final VIC SURV */,
 				A5A1918F1C9A345C0056C979 /* bama.png */,
 				A55E6AD91C941F40006F0FE5 /* Dead_Fish.png */,
@@ -626,6 +632,8 @@
 			children = (
 				A55E6B101C96644D006F0FE5 /* StageModels.h */,
 				A55E6B111C96644D006F0FE5 /* StageModels.m */,
+				A57AA7911C9FCB5300F6540A /* StageCell.h */,
+				A57AA7921C9FCB5300F6540A /* StageCell.m */,
 			);
 			path = StageModels;
 			sourceTree = "<group>";
@@ -1006,6 +1014,7 @@
 				A55E6AC81C93DCE5006F0FE5 /* board bg.png in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
 				A55E6ACC1C93DCE5006F0FE5 /* Pentagon.png in Resources */,
+				A57AA7901C9FCA4500F6540A /* green-forest-and-hills-background_PNG.png in Resources */,
 				A55E6ACA1C93DCE5006F0FE5 /* Diamond.png in Resources */,
 				A55E6ACB1C93DCE5006F0FE5 /* Hexgon.png in Resources */,
 				A55E6AC51C93DCE5006F0FE5 /* ab.png in Resources */,
@@ -1104,6 +1113,7 @@
 				A57AA78E1C9F693500F6540A /* UILayer.m in Sources */,
 				A55E6B121C96644D006F0FE5 /* StageModels.m in Sources */,
 				A55E6AD21C9413CD006F0FE5 /* PollutionStandard.m in Sources */,
+				A57AA7931C9FCB5300F6540A /* StageCell.m in Sources */,
 				A55E6B0E1C963EEB006F0FE5 /* MenuScene.m in Sources */,
 				A55E69891C93DAD0006F0FE5 /* GameMainController.m in Sources */,
 				A55E6B171C9674D2006F0FE5 /* StageChooseScene.m in Sources */,

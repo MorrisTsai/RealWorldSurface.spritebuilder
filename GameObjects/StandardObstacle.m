@@ -25,6 +25,7 @@
         self.myView.scale = size.width/self.myView.contentSize.width;
         self.myView.position = ccp(self.contentSize.width/2, self.contentSize.height/2);
         self.anchorPoint = ccp(0.5, 0.5);
+        self.damage = 1;
     }
     return self;
 }

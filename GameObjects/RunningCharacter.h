@@ -10,7 +10,7 @@
 #import "StandardGameObject.h"
 
 @interface RunningCharacter : StandardGameObject
-@property int hp;
+@property (nonatomic) int hp;
 @property int maxHp;
 @property int speed;
 @property int ammunition;
@@ -21,5 +21,8 @@
 @property CCSprite* myView;
 
 - (instancetype)initWithSize:(CGSize)size;
+-(void)initCharacterData;
+- (void) damaged:(int)damage;
+- (void) healed :(int)heal;
 - (void) jump;
 @end
