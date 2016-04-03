@@ -15,5 +15,6 @@
 @property (nonatomic, readonly) int creatureConstant;
 @property (nonatomic, readonly) int obstacleConstant;
 @property (nonatomic, readonly) int pollutionConstant;
+@property (nonatomic, readonly) int garbageConstant;
 -(int)randNumberOfPOllutionNumbers;
 @end

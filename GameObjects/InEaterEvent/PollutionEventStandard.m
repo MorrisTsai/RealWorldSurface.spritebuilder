@@ -62,8 +62,9 @@
 {
     for(int i = 0 ;i < [pollutionNodes count]; i++)
     {
+        CGRect checkSwipeRect = CGRectMake(touchPoint.x-1, touchPoint.y + 1, 2, 2);
         PollutionStandard* pollution = [pollutionNodes objectAtIndex:i];
-        if(CGRectContainsPoint(pollution.boundingBox, touchPoint))
+        if(CGRectIntersectsRect(pollution.boundingBox, checkSwipeRect))
         {
             [pollution die];
             [pollutionNodes removeObject:pollution];

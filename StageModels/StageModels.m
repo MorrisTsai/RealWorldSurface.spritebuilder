@@ -15,6 +15,12 @@
     int half;
     int threeQ;
     int max;
+    
+    
+    
+    double ni;
+    double ox;
+    double ph;
 }
 
 - (instancetype)initAttribute:(NSDictionary*)attribute;
@@ -22,11 +28,15 @@
     self = [super init];
     if (self) {
         min = [[attribute objectForKey:Minumun]intValue];
-        quarter = [[attribute objectForKey:Quarter]intValue];
+       // quarter = [[attribute objectForKey:Quarter]intValue];
         half = [[attribute objectForKey:Half]intValue];
-        threeQ = [[attribute objectForKey:ThreeQ]intValue];
+        //threeQ = [[attribute objectForKey:ThreeQ]intValue];
         max = [[attribute objectForKey:Maxima]intValue];
-        self.stageName = [attribute objectForKey:@"Name"];
+        
+        ni = [[attribute objectForKey:Ni50]doubleValue];
+        ox = [[attribute objectForKey:Ox50]doubleValue];
+        ph = [[attribute objectForKey:Ph50]doubleValue];
+        self.stageName = [attribute objectForKey:SubRegionName];
     }
     return self;
 }
@@ -37,6 +47,10 @@
 -(int)obstacleConstant
 {
     return 4;
+}
+-(int)garbageConstant
+{
+ return ox*ni*ph*10;
 }
 -(int)pollutionConstant
 {

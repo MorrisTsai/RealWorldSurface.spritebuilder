@@ -9,6 +9,7 @@
 #import "MenuScene.h"
 #import "GameMainScene.h"
 #import "StageChooseScene.h"
+#import "RealSourceManager.h"
 
 @implementation MenuScene
 {
@@ -38,10 +39,24 @@
 -(void)onEnter
 {
     [super onEnter];
-    [self buildButtons];
+    
     [self startView];
     [self buildGround];
     [self schedule:@selector(groundMove) interval:0.01];
+    if(![RealSourceManager shared].regionArray)
+    {
+        
+        [[RealSourceManager shared]listAllRegionFromServerWithCompletionHandler:^(BOOL ok)
+         {
+             
+         }];
+    }
+    [[RealSourceManager shared]checkDataNumberFromServerWithCompletionHandler:^(BOOL ok)
+    {
+         [self buildButtons];
+    }];
+    
+   
     
 }
 -(void)startView
@@ -162,7 +177,7 @@
     CCSprite* character = [CCSprite spriteWithImageNamed:@"surfer.png"];
     character.scale *= 0.2;
     [self addChild:character z:10];
-    character.position = ccp(self.contentSize.width*0.1, standO.position.y+ character.contentSize.height*0.2/2 + standO.contentSize.height-20);
+    character.position = ccp(self.contentSize.width*0.1, standO.position.y+ character.contentSize.height*0.2/2 + standO.contentSize.height + 20);
     CCActionFadeOut* fo = [CCActionFadeOut actionWithDuration:1];
     [whiteNode runAction:fo];
     

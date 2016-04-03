@@ -63,6 +63,17 @@
 		927F61B9196C771E000F43EF /* iPhone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F590E188484E7003F4D28 /* iPhone@2x.png */; };
 		927F61BA196C771E000F43EF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B737896D180762440076A88C /* Default.png */; };
 		927F61BB196C771E000F43EF /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
+		A5394AB01CAFA72D00272141 /* RealSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5394AAF1CAFA72D00272141 /* RealSourceManager.m */; };
+		A5394AC21CAFB4B700272141 /* GarbageObstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = A5394AC11CAFB4B700272141 /* GarbageObstacle.m */; };
+		A5394ACB1CAFB77900272141 /* bottle1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5394AC41CAFB77900272141 /* bottle1.png */; };
+		A5394ACC1CAFB77900272141 /* bottle2.png in Resources */ = {isa = PBXBuildFile; fileRef = A5394AC51CAFB77900272141 /* bottle2.png */; };
+		A5394ACD1CAFB77900272141 /* bottle3.png in Resources */ = {isa = PBXBuildFile; fileRef = A5394AC61CAFB77900272141 /* bottle3.png */; };
+		A5394ACE1CAFB77900272141 /* bottle4.png in Resources */ = {isa = PBXBuildFile; fileRef = A5394AC71CAFB77900272141 /* bottle4.png */; };
+		A5394ACF1CAFB77900272141 /* bottle5.png in Resources */ = {isa = PBXBuildFile; fileRef = A5394AC81CAFB77900272141 /* bottle5.png */; };
+		A5394AD01CAFB77900272141 /* bottle6.png in Resources */ = {isa = PBXBuildFile; fileRef = A5394AC91CAFB77900272141 /* bottle6.png */; };
+		A5394AD11CAFB77900272141 /* bottle7.png in Resources */ = {isa = PBXBuildFile; fileRef = A5394ACA1CAFB77900272141 /* bottle7.png */; };
+		A5394AD31CAFB79400272141 /* trubbish.png in Resources */ = {isa = PBXBuildFile; fileRef = A5394AD21CAFB79400272141 /* trubbish.png */; };
+		A5394AF31CB1211F00272141 /* ScrollViewBoundaryShader.m in Sources */ = {isa = PBXBuildFile; fileRef = A5394AF21CB1211F00272141 /* ScrollViewBoundaryShader.m */; };
 		A55E695B1C90FB0D006F0FE5 /* GameMainScene.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E695A1C90FB0D006F0FE5 /* GameMainScene.m */; };
 		A55E69821C93DA29006F0FE5 /* StandardObstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E69811C93DA29006F0FE5 /* StandardObstacle.m */; };
 		A55E69851C93DA53006F0FE5 /* RunningCharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = A55E69841C93DA53006F0FE5 /* RunningCharacter.m */; };
@@ -215,6 +226,20 @@
 		7BF6AF9F1A425F9800FFF9BA /* JavaFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaFoundation.framework; path = "../../../../../../../Library/SBAndroid/Application Support/Developer/Shared/Xcode/Platforms/Android.platform/Developer/SDKs/SBAndroid.sdk/System/Library/Frameworks/JavaFoundation.framework"; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		927F61BF196C771E000F43EF /* RealWorldSurface Android.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RealWorldSurface Android.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5394AAE1CAFA72D00272141 /* RealSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealSourceManager.h; sourceTree = "<group>"; };
+		A5394AAF1CAFA72D00272141 /* RealSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealSourceManager.m; sourceTree = "<group>"; };
+		A5394AC01CAFB4B700272141 /* GarbageObstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GarbageObstacle.h; sourceTree = "<group>"; };
+		A5394AC11CAFB4B700272141 /* GarbageObstacle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GarbageObstacle.m; sourceTree = "<group>"; };
+		A5394AC41CAFB77900272141 /* bottle1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle1.png; sourceTree = "<group>"; };
+		A5394AC51CAFB77900272141 /* bottle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle2.png; sourceTree = "<group>"; };
+		A5394AC61CAFB77900272141 /* bottle3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle3.png; sourceTree = "<group>"; };
+		A5394AC71CAFB77900272141 /* bottle4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle4.png; sourceTree = "<group>"; };
+		A5394AC81CAFB77900272141 /* bottle5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle5.png; sourceTree = "<group>"; };
+		A5394AC91CAFB77900272141 /* bottle6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle6.png; sourceTree = "<group>"; };
+		A5394ACA1CAFB77900272141 /* bottle7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bottle7.png; sourceTree = "<group>"; };
+		A5394AD21CAFB79400272141 /* trubbish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trubbish.png; sourceTree = "<group>"; };
+		A5394AF11CB1211F00272141 /* ScrollViewBoundaryShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewBoundaryShader.h; sourceTree = "<group>"; };
+		A5394AF21CB1211F00272141 /* ScrollViewBoundaryShader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewBoundaryShader.m; sourceTree = "<group>"; };
 		A55E69591C90FB0D006F0FE5 /* GameMainScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMainScene.h; sourceTree = "<group>"; };
 		A55E695A1C90FB0D006F0FE5 /* GameMainScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameMainScene.m; sourceTree = "<group>"; };
 		A55E69801C93DA29006F0FE5 /* StandardObstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardObstacle.h; sourceTree = "<group>"; };
@@ -534,6 +559,39 @@
 			name = libs;
 			sourceTree = "<group>";
 		};
+		A5394AAB1CAFA71C00272141 /* RealSourceManager */ = {
+			isa = PBXGroup;
+			children = (
+				A5394AAE1CAFA72D00272141 /* RealSourceManager.h */,
+				A5394AAF1CAFA72D00272141 /* RealSourceManager.m */,
+			);
+			path = RealSourceManager;
+			sourceTree = "<group>";
+		};
+		A5394AC31CAFB75B00272141 /* rubbish */ = {
+			isa = PBXGroup;
+			children = (
+				A5394AD21CAFB79400272141 /* trubbish.png */,
+				A5394AC41CAFB77900272141 /* bottle1.png */,
+				A5394AC51CAFB77900272141 /* bottle2.png */,
+				A5394AC61CAFB77900272141 /* bottle3.png */,
+				A5394AC71CAFB77900272141 /* bottle4.png */,
+				A5394AC81CAFB77900272141 /* bottle5.png */,
+				A5394AC91CAFB77900272141 /* bottle6.png */,
+				A5394ACA1CAFB77900272141 /* bottle7.png */,
+			);
+			path = rubbish;
+			sourceTree = "<group>";
+		};
+		A5394AEE1CB1211200272141 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A5394AF11CB1211F00272141 /* ScrollViewBoundaryShader.h */,
+				A5394AF21CB1211F00272141 /* ScrollViewBoundaryShader.m */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		A55E69541C90FAFD006F0FE5 /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -557,6 +615,8 @@
 				A55E69841C93DA53006F0FE5 /* RunningCharacter.m */,
 				A55E6AD61C941509006F0FE5 /* StandardGameObject.h */,
 				A55E6AD71C941509006F0FE5 /* StandardGameObject.m */,
+				A5394AC01CAFB4B700272141 /* GarbageObstacle.h */,
+				A5394AC11CAFB4B700272141 /* GarbageObstacle.m */,
 			);
 			path = GameObjects;
 			sourceTree = "<group>";
@@ -573,6 +633,7 @@
 		A55E6ABA1C93DCE5006F0FE5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5394AC31CAFB75B00272141 /* rubbish */,
 				A57AA78F1C9FCA4500F6540A /* green-forest-and-hills-background_PNG.png */,
 				A5A191A71C9D3D110056C979 /* Meng final VIC SURV */,
 				A5A1918F1C9A345C0056C979 /* bama.png */,
@@ -718,6 +779,8 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
+				A5394AEE1CB1211200272141 /* Helper */,
+				A5394AAB1CAFA71C00272141 /* RealSourceManager */,
 				A55E6B131C9664C3006F0FE5 /* VSConstant */,
 				A55E6B0F1C96643C006F0FE5 /* StageModels */,
 				A55E6B091C963ECF006F0FE5 /* MenuScene */,
@@ -869,6 +932,7 @@
 						CreatedOnToolsVersion = 6.0.1;
 					};
 					B77F1B2D17B978D7009739AE = {
+						DevelopmentTeam = UP95BU7KY5;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 0;
@@ -991,6 +1055,8 @@
 				A5A191B91C9D3D110056C979 /* surfer.png in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
+				A5394ACC1CAFB77900272141 /* bottle2.png in Resources */,
+				A5394AD31CAFB79400272141 /* trubbish.png in Resources */,
 				A5A191B41C9D3D110056C979 /* Background.png in Resources */,
 				A5A191B71C9D3D110056C979 /* cloud_3.png in Resources */,
 				A55E6ACD1C93DCE5006F0FE5 /* Rectangle.png in Resources */,
@@ -1000,15 +1066,21 @@
 				B71F5916188484E7003F4D28 /* iPhone-old@2x.png in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
 				A5A191BD1C9D3D110056C979 /* Water_drop_2.png in Resources */,
+				A5394ACF1CAFB77900272141 /* bottle5.png in Resources */,
 				A5A191B51C9D3D110056C979 /* cloud_1.png in Resources */,
 				A5A191BC1C9D3D110056C979 /* Water_drop_1.png in Resources */,
 				A55E6ADC1C941F40006F0FE5 /* Mud_Fish.png in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				A5A191BA1C9D3D110056C979 /* SURV.png in Resources */,
 				A5A191BF1C9D3D110056C979 /* Water_drop_4.png in Resources */,
+				A5394ACD1CAFB77900272141 /* bottle3.png in Resources */,
+				A5394AD01CAFB77900272141 /* bottle6.png in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
 				A55E6AC61C93DCE5006F0FE5 /* bg1.png in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
+				A5394ACB1CAFB77900272141 /* bottle1.png in Resources */,
+				A5394ACE1CAFB77900272141 /* bottle4.png in Resources */,
+				A5394AD11CAFB77900272141 /* bottle7.png in Resources */,
 				A55E6AC91C93DCE5006F0FE5 /* Circle.png in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
 				A55E6AC81C93DCE5006F0FE5 /* board bg.png in Resources */,
@@ -1101,6 +1173,7 @@
 			files = (
 				B73789871807631A0076A88C /* main.m in Sources */,
 				A57AA78A1C9F5F3B00F6540A /* GroundObject.m in Sources */,
+				A5394AC21CAFB4B700272141 /* GarbageObstacle.m in Sources */,
 				A55E6AEE1C944B67006F0FE5 /* StandCreature.m in Sources */,
 				A55E6B1A1C9674E9006F0FE5 /* BigStageLayer.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
@@ -1113,6 +1186,8 @@
 				A57AA78E1C9F693500F6540A /* UILayer.m in Sources */,
 				A55E6B121C96644D006F0FE5 /* StageModels.m in Sources */,
 				A55E6AD21C9413CD006F0FE5 /* PollutionStandard.m in Sources */,
+				A5394AB01CAFA72D00272141 /* RealSourceManager.m in Sources */,
+				A5394AF31CB1211F00272141 /* ScrollViewBoundaryShader.m in Sources */,
 				A57AA7931C9FCB5300F6540A /* StageCell.m in Sources */,
 				A55E6B0E1C963EEB006F0FE5 /* MenuScene.m in Sources */,
 				A55E69891C93DAD0006F0FE5 /* GameMainController.m in Sources */,
@@ -1401,7 +1476,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: MENG LIN TSAI (Y3V74E4LY6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1436,7 +1511,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: MENG LIN TSAI (Y3V74E4LY6)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Source/Prefix.pch;
