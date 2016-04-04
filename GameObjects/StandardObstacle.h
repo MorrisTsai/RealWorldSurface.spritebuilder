@@ -13,6 +13,8 @@
 @property BOOL hitted;
 @property CCSprite* myView;
 @property int damage;
-
+@property int obstacleId;
 - (instancetype)initWithSize:(CGSize)size;
+- (BOOL)checkTouched:(CCTouch*)touch;
+
 @end

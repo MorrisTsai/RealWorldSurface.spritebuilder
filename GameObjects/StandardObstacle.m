@@ -7,7 +7,7 @@
 //
 
 #import "StandardObstacle.h"
-
+static int counter = 0;
 @implementation StandardObstacle
 {
     
@@ -26,8 +26,17 @@
         self.myView.position = ccp(self.contentSize.width/2, self.contentSize.height/2);
         self.anchorPoint = ccp(0.5, 0.5);
         self.damage = 1;
+        self.obstacleId = counter;
+        counter++;
     }
     return self;
 }
-
+-(BOOL)checkTouched:(CCTouch*)touch
+{
+    return NO;
+}
+-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+{
+    
+}
 @end

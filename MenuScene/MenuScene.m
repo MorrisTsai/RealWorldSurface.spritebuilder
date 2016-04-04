@@ -10,10 +10,15 @@
 #import "GameMainScene.h"
 #import "StageChooseScene.h"
 #import "RealSourceManager.h"
+#import <AVFoundation/AVFoundation.h>
+#import <AVKit/AVKit.h>
+@interface MenuScene ()<AVPlayerViewControllerDelegate>
+@end
 
 @implementation MenuScene
 {
     CCSprite* background ;
+    CCSprite* pendingBackground;
     CGSize winSize;
     CCButton* gameButton;
     CCButton* shopButton;
@@ -28,37 +33,67 @@
     self = [super init];
     if (self) {
         winSize = [CCDirector sharedDirector].viewSize;
-        background = [CCSprite spriteWithImageNamed:@"Background.png"];
-        [self addChild:background];
-        background.position = ccp(winSize.width/2,winSize.height/2);
-        
         groundArray=[NSMutableArray array];
+       
     }
     return self;
 }
+-(void)buildBackground
+{
+    background = [CCSprite spriteWithImageNamed:@"BroadBeach_BG.png"];
+    [self addChild:background z:-1];
+    background.position = ccp(winSize.width/2, winSize.height/2);
+    
+    pendingBackground = [CCSprite spriteWithImageNamed:@"BroadBeach_BG.png"];
+    [self addChild:pendingBackground];
+    pendingBackground.position = ccpAdd(background.position, ccp(pendingBackground.contentSize.width, 0));
+}
+-(void)backgroundMove
+{
+    background.position = ccp(background.position.x -1, background.position.y);
+    pendingBackground.position = ccp(pendingBackground.position.x - 1, pendingBackground.position.y);
+    
+    if(background.position.x + background.contentSize.width*2/3 < 0)
+    {
+        background.position = ccpAdd(pendingBackground.position, ccp(background.contentSize.width, 0));
+    }
+    
+    if(pendingBackground.position.x + pendingBackground.contentSize.width*2/3 < 0)
+    {
+        pendingBackground.position = ccpAdd(background.position, ccp(background.contentSize.width, 0));
+    }
+    
+    
+}
+
+
 -(void)onEnter
 {
     [super onEnter];
-    
+    [self buildBackground];
     [self startView];
+    
     [self buildGround];
     [self schedule:@selector(groundMove) interval:0.01];
-    if(![RealSourceManager shared].regionArray)
-    {
-        
-        [[RealSourceManager shared]listAllRegionFromServerWithCompletionHandler:^(BOOL ok)
-         {
-             
-         }];
-    }
-    [[RealSourceManager shared]checkDataNumberFromServerWithCompletionHandler:^(BOOL ok)
+  
+       [[RealSourceManager shared]checkDataNumberFromServerWithCompletionHandler:^(BOOL ok)
     {
          [self buildButtons];
+        if(![RealSourceManager shared].regionArray)
+        {
+            
+            [[RealSourceManager shared]listAllRegionFromServerWithCompletionHandler:^(BOOL ok)
+             {
+                 
+             }];
+        }
+
     }];
     
-   
+   // [self performSelector:@selector(runVideo) withObject:nil afterDelay:5];
     
 }
+
 -(void)startView
 {
     CCActionCallFunc* cf1 = [CCActionCallFunc actionWithTarget:self selector:@selector(leftIn)];
@@ -95,7 +130,7 @@
         blockWidth += groundNode.contentSize.width;
         if(groundNode.position.y  == 0)
         {
-            groundNode.position = ccp(groundNode.position.x, 25);
+            groundNode.position = ccp(groundNode.position.x, 0);
         }
         [groundArray addObject:groundNode];
         
@@ -174,18 +209,52 @@
 -(void)shineFadeOut
 {
     CCSprite* standO = [groundArray firstObject];
-    CCSprite* character = [CCSprite spriteWithImageNamed:@"surfer.png"];
+    CCSprite* character = [CCSprite spriteWithImageNamed:@"cat_run(1).png"];
     character.scale *= 0.2;
     [self addChild:character z:10];
     character.position = ccp(self.contentSize.width*0.1, standO.position.y+ character.contentSize.height*0.2/2 + standO.contentSize.height + 20);
     CCActionFadeOut* fo = [CCActionFadeOut actionWithDuration:1];
     [whiteNode runAction:fo];
     
-    CCActionMoveTo* ft1 = [CCActionMoveTo actionWithDuration:0.5 position:ccp(character.position.x, character.position.y+5)];
-    CCActionMoveTo* ft2 = [CCActionMoveTo actionWithDuration:0.5 position:ccp(character.position.x, character.position.y - 5)];
+    CCActionMoveTo* ft1 = [CCActionMoveTo actionWithDuration:0.4 position:ccp(character.position.x, character.position.y+5)];
+    CCActionMoveTo* ft2 = [CCActionMoveTo actionWithDuration:0.4 position:ccp(character.position.x, character.position.y - 5)];
     CCActionSequence* seq = [CCActionSequence actionOne:ft1 two:ft2];
     CCActionRepeatForever* fr = [CCActionRepeatForever actionWithAction:seq];
     [character runAction:fr];
+    
+    
+    
+    
+    
+   
+        NSMutableArray* aniFrames = [NSMutableArray array];
+        CCSprite* sp1 = [CCSprite spriteWithImageNamed:@"cat_run(1).png"];
+        CCSprite* sp2 =[CCSprite spriteWithImageNamed:@"cat_run(2).png"];
+        CCSprite* sp3 =[CCSprite spriteWithImageNamed:@"cat_run(3).png"];
+        CCSprite* sp4 =[CCSprite spriteWithImageNamed:@"cat_run(4).png"];
+        
+        CCSprite* sp5 = [CCSprite spriteWithImageNamed:@"cat_run(5).png"];
+        CCSprite* sp6 =[CCSprite spriteWithImageNamed:@"cat_run(6).png"];
+        CCSprite* sp7 =[CCSprite spriteWithImageNamed:@"cat_run(7).png"];
+        CCSprite* sp8 =[CCSprite spriteWithImageNamed:@"cat_run(8).png"];
+        [aniFrames addObject:sp1.spriteFrame];
+        [aniFrames addObject:sp2.spriteFrame];
+        [aniFrames addObject:sp3.spriteFrame];
+        [aniFrames addObject:sp4.spriteFrame];
+        [aniFrames addObject:sp5.spriteFrame];
+        [aniFrames addObject:sp6.spriteFrame];
+        [aniFrames addObject:sp7.spriteFrame];
+        [aniFrames addObject:sp8.spriteFrame];
+        
+        CCAnimation* animation = [CCAnimation animationWithSpriteFrames:aniFrames delay:0.2];
+        // aniSprite = [CCSprite spriteWithImageNamed:@"Water_drop_1.png"];
+        CCActionAnimate* actionAni = [CCActionAnimate actionWithAnimation:animation];
+        CCActionRepeatForever* rp = [CCActionRepeatForever actionWithAction:actionAni];
+        // aniSprite.scale = self.myView.scaleX*2;
+        [character runAction:rp];
+      [self schedule:@selector(backgroundMove) interval:0.01];
+        
+    
 }
 
 

@@ -21,6 +21,8 @@
     NSMutableArray* stagesArray;
     CGSize winSize;
     CCNode* contentNode;
+    CCButton* backButton;
+    ScrollViewBoundaryShader* shader;
 }
 - (instancetype)init
 {
@@ -78,7 +80,7 @@
 -(void)showLoading
 {
     [contentNode removeFromParentAndCleanup:YES];
-    contentNode = [CCNodeColor nodeWithColor:[CCColor brownColor]];
+    contentNode = [CCNodeColor nodeWithColor:[CCColor clearColor]];
     [self addChild:contentNode];
     contentNode.position = ccp(winSize.width/2, winSize.height/2);
     contentNode.contentSize = CGSizeMake(winSize.width/2, winSize.height/2);
@@ -104,6 +106,7 @@
     }
     else
     {
+        [stagesArray removeAllObjects];
         for(int i = 0 ; i < [subRegionInformation count]; i ++)
         {
             NSDictionary* info = [subRegionInformation objectAtIndex:i];
@@ -129,32 +132,53 @@
     GameMainScene* game = [[GameMainScene alloc]initWithModel:model];
     [[CCDirector sharedDirector]replaceScene:game withTransition:[CCTransition transitionFadeWithDuration:1]];
 }
+-(void)backButtonPressed
+{
+    [shader removeFromParentAndCleanup:YES];
+    [backButton removeFromParentAndCleanup:YES];
+    [self showLoading];
+    [self buildRegion];
+}
 -(void)buildStageList
 {
+    
+    backButton = [CCButton buttonWithTitle:@"BACK" fontName:nil fontSize:14];
+    [self addChild:backButton];
+    [backButton setTarget:self selector:@selector(backButtonPressed)];
+    backButton.position = ccp(winSize.width - backButton.contentSize.width, winSize.height - backButton.contentSize.height);
     [contentNode removeFromParentAndCleanup:YES];
     
     CCNode* scrollContent = [CCNode node];
-    int height = 15;
+    int height = 30;
     int space = 5;
-    ScrollViewBoundaryShader* shader = [[ScrollViewBoundaryShader alloc]init];
+    shader = [[ScrollViewBoundaryShader alloc]init];
     shader.contentSize = CGSizeMake(self.contentSize.width*0.9, self.contentSize.height*0.9);
     [self addChild:shader];
     shader.position = ccp(self.contentSize.width*0.1, self.contentSize.height*0.1);
 
-    scrollContent.contentSize = CGSizeMake(contentNode.contentSize.width, ([stagesArray count]+2) * (height + space)*0.75);
-    
+    scrollContent.contentSize = CGSizeMake(contentNode.contentSize.width, ([stagesArray count]+2) * (height + space));
+     CCSprite* image = [CCSprite spriteWithImageNamed:@"empty-green-button.png"];
     for(int i = 0 ; i < [stagesArray count]; i++)
     {
         
         StageModels* thisModel = [stagesArray objectAtIndex:i];
-        CCButton* button = [CCButton buttonWithTitle:thisModel.stageName];
+       
+        CCButton* button = [CCButton buttonWithTitle:@"" spriteFrame:image.spriteFrame];
+        //button.preferredSize = CGSizeMake(winSize.width*0.8, height);
+        button.scaleX = winSize.width*0.75/button.contentSize.width;
+        button.scaleY = height/button.contentSize.height;
+        CCLabelTTF* nameLabel = [CCLabelTTF labelWithString:thisModel.stageName fontName:nil fontSize:9];
+        nameLabel.fontColor = [CCColor redColor];
+      
      //   button.position = ccp(self.contentSize.width/2, self.contentSize.height/2 + 20*i);
         button.name = [NSString stringWithFormat:@"%d",i];
      
         [button setTarget:self selector:@selector(stageChosed:)];
         
-        button.position = ccp(button.contentSize.width/2 + MARGIN, scrollContent.contentSize.height - (i + 1) * (MARGIN + space));
+        button.position = ccp(button.contentSize.width/2 + MARGIN, scrollContent.contentSize.height - (i + 1) * (height + space));
+        nameLabel.position = button.position;
         [scrollContent addChild:button];
+        [scrollContent addChild:nameLabel];
       
     }
     

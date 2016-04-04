@@ -46,11 +46,12 @@
 }
 -(int)obstacleConstant
 {
-    return 4;
+    return self.garbageConstant + 4;
 }
 -(int)garbageConstant
 {
- return ox*ni*ph*10;
+    int returnInt =ox*ni*ph*20;
+    return returnInt < 2 ? returnInt : 2;
 }
 -(int)pollutionConstant
 {

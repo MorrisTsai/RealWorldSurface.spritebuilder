@@ -10,4 +10,5 @@
 
 @interface GroundObject : CCNode
 - (instancetype)initWithSize:(CGSize)size;
+
 @end

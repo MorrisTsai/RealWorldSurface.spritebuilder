@@ -85,7 +85,7 @@ static RealSourceManager* sharedManager;
     }];
 
 }
--(void)listAllRegionFromServerWithCompletionHandler: (void (^)(bool errorMessage)) completionHandler
+-(void)listAllRegionFromServerWithCompletionHandler: (void (^)(BOOL errorMessage)) completionHandler
 
 {
     
@@ -130,7 +130,7 @@ static RealSourceManager* sharedManager;
     }];
    
 }
--(void)listDataWithAreaId:(NSString*)areaId  withCompletionHandler: (void (^)(bool errorMessage)) completionHandler;
+-(void)listDataWithAreaId:(NSString*)areaId  withCompletionHandler: (void (^)(BOOL errorMessage)) completionHandler;
 {
     NSString *str=[NSString stringWithFormat:@"http://vicsurv.cloudapp.net:5780/api/get_regions/%@",areaId];
     NSURL *url=[NSURL URLWithString:str];

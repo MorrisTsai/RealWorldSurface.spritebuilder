@@ -23,7 +23,7 @@
 {
     [super onEnter];
     [self decideSpriteFrame];
-    [self setUserInteractionEnabled:YES];
+  //  [self setUserInteractionEnabled:YES];
     
 }
 -(void)decideSpriteFrame
@@ -39,14 +39,29 @@
    // self.myView.scale = 1;
     
     
+    
+}
+-(BOOL)checkTouched:(CCTouch *)touch
+{
+    CGPoint touchPoint = [self convertToNodeSpace:touch.locationInWorld];
+    if(ccpDistance(touchPoint, ccp(self.contentSize.width/2, self.contentSize.width/2)) < self.contentSize.width)
+    {
+        [self pickedUp];
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
 }
 -(void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
-    [self pickedUp];
+    
 }
 -(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
 {
     
+   
 }
 -(void)pickedUp
 {

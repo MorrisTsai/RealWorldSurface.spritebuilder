@@ -19,8 +19,8 @@
 
 
 #pragma mark Server Method;
--(void)checkDataNumberFromServerWithCompletionHandler: (void (^)(bool errorMessage)) completionHandler;
--(void)listAllRegionFromServerWithCompletionHandler: (void (^)(bool errorMessage)) completionHandler;
--(void)listDataWithAreaId:(NSString*)areaId  withCompletionHandler: (void (^)(bool errorMessage)) completionHandler;
+-(void)checkDataNumberFromServerWithCompletionHandler: (void (^)(BOOL errorMessage)) completionHandler;
+-(void)listAllRegionFromServerWithCompletionHandler: (void (^)(BOOL errorMessage)) completionHandler;
+-(void)listDataWithAreaId:(NSString*)areaId  withCompletionHandler: (void (^)(BOOL errorMessage)) completionHandler;
 +(RealSourceManager*)shared;
 @end

@@ -29,6 +29,7 @@
         [self addChild:drawNode];
         self.anchorPoint = ccp(0.5, 0.5);
         pNumbers = numbers;
+
         pollutionNodes = [NSMutableArray array];
       //  [self setUserInteractionEnabled:YES];
          
@@ -60,11 +61,16 @@
 }
 -(void)checkHitPollution:(CGPoint)touchPoint
 {
+
     for(int i = 0 ;i < [pollutionNodes count]; i++)
     {
-        CGRect checkSwipeRect = CGRectMake(touchPoint.x-1, touchPoint.y + 1, 2, 2);
+        
+        
+       // CGRect checkSwipeRect = CGRectMake(touchPoint.x-2, touchPoint.y + 2, 4, 4);
         PollutionStandard* pollution = [pollutionNodes objectAtIndex:i];
-        if(CGRectIntersectsRect(pollution.boundingBox, checkSwipeRect))
+        
+        //if(CGRectIntersectsRect(pollution.boundingBox, checkSwipeRect))
+        if(ccpDistance(touchPoint, pollution.position) < 10)
         {
             [pollution die];
             [pollutionNodes removeObject:pollution];
