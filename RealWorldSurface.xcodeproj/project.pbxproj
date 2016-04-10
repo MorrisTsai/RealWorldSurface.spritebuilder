@@ -189,12 +189,24 @@
 		A5A191B71C9D3D110056C979 /* cloud_3.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191AB1C9D3D110056C979 /* cloud_3.png */; };
 		A5A191B81C9D3D110056C979 /* ocean-part.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191AC1C9D3D110056C979 /* ocean-part.png */; };
 		A5A191B91C9D3D110056C979 /* surfer.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191AD1C9D3D110056C979 /* surfer.png */; };
-		A5A191BA1C9D3D110056C979 /* SURV.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191AE1C9D3D110056C979 /* SURV.png */; };
-		A5A191BB1C9D3D110056C979 /* VIC.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191AF1C9D3D110056C979 /* VIC.png */; };
 		A5A191BC1C9D3D110056C979 /* Water_drop_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191B01C9D3D110056C979 /* Water_drop_1.png */; };
 		A5A191BD1C9D3D110056C979 /* Water_drop_2.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191B11C9D3D110056C979 /* Water_drop_2.png */; };
 		A5A191BE1C9D3D110056C979 /* Water_drop_3.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191B21C9D3D110056C979 /* Water_drop_3.png */; };
 		A5A191BF1C9D3D110056C979 /* Water_drop_4.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191B31C9D3D110056C979 /* Water_drop_4.png */; };
+		A5D6EE331CB4F9850081EF63 /* vic.png in Resources */ = {isa = PBXBuildFile; fileRef = A5D6EE321CB4F9850081EF63 /* vic.png */; };
+		A5D6EE351CB4F98B0081EF63 /* run.png in Resources */ = {isa = PBXBuildFile; fileRef = A5D6EE341CB4F98B0081EF63 /* run.png */; };
+		A5D6EE381CB515580081EF63 /* stone.png in Resources */ = {isa = PBXBuildFile; fileRef = A5D6EE371CB515580081EF63 /* stone.png */; };
+		A5D6EE3A1CB5155D0081EF63 /* stone2.png in Resources */ = {isa = PBXBuildFile; fileRef = A5D6EE391CB5155D0081EF63 /* stone2.png */; };
+		A5FCA81A1CB5DCA300AB27F6 /* Blob-Monsters-Return_Looping.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5FCA8111CB5DCA300AB27F6 /* Blob-Monsters-Return_Looping.mp3 */; };
+		A5FCA81B1CB5DCA300AB27F6 /* Dystopic-Factory_Looping.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5FCA8121CB5DCA300AB27F6 /* Dystopic-Factory_Looping.mp3 */; };
+		A5FCA81C1CB5DCA300AB27F6 /* Farty-Crooks_Looping.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5FCA8131CB5DCA300AB27F6 /* Farty-Crooks_Looping.mp3 */; };
+		A5FCA81D1CB5DCA300AB27F6 /* Funky-Gameplay_Looping.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5FCA8141CB5DCA300AB27F6 /* Funky-Gameplay_Looping.mp3 */; };
+		A5FCA81E1CB5DCA300AB27F6 /* Mister-Sneakypants_Looping.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5FCA8151CB5DCA300AB27F6 /* Mister-Sneakypants_Looping.mp3 */; };
+		A5FCA81F1CB5DCA300AB27F6 /* Monkey-Island-Band_Looping.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5FCA8161CB5DCA300AB27F6 /* Monkey-Island-Band_Looping.mp3 */; };
+		A5FCA8201CB5DCA300AB27F6 /* Sector-Off-Limits_Looping.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5FCA8171CB5DCA300AB27F6 /* Sector-Off-Limits_Looping.mp3 */; };
+		A5FCA8211CB5DCA300AB27F6 /* Self-Destruct-Sequence.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5FCA8181CB5DCA300AB27F6 /* Self-Destruct-Sequence.mp3 */; };
+		A5FCA8221CB5DCA300AB27F6 /* Sideburn-Squad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5FCA8191CB5DCA300AB27F6 /* Sideburn-Squad.mp3 */; };
+		A5FCA8301CB5E66800AB27F6 /* SoundManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5FCA82F1CB5E66800AB27F6 /* SoundManager.m */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
 		B71F5913188484E7003F4D28 /* iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5909188484E7003F4D28 /* iPad.png */; };
@@ -451,12 +463,25 @@
 		A5A191AB1C9D3D110056C979 /* cloud_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud_3.png; sourceTree = "<group>"; };
 		A5A191AC1C9D3D110056C979 /* ocean-part.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ocean-part.png"; sourceTree = "<group>"; };
 		A5A191AD1C9D3D110056C979 /* surfer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = surfer.png; sourceTree = "<group>"; };
-		A5A191AE1C9D3D110056C979 /* SURV.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SURV.png; sourceTree = "<group>"; };
-		A5A191AF1C9D3D110056C979 /* VIC.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VIC.png; sourceTree = "<group>"; };
 		A5A191B01C9D3D110056C979 /* Water_drop_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water_drop_1.png; sourceTree = "<group>"; };
 		A5A191B11C9D3D110056C979 /* Water_drop_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water_drop_2.png; sourceTree = "<group>"; };
 		A5A191B21C9D3D110056C979 /* Water_drop_3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water_drop_3.png; sourceTree = "<group>"; };
 		A5A191B31C9D3D110056C979 /* Water_drop_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water_drop_4.png; sourceTree = "<group>"; };
+		A5D6EE321CB4F9850081EF63 /* vic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vic.png; sourceTree = "<group>"; };
+		A5D6EE341CB4F98B0081EF63 /* run.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = run.png; sourceTree = "<group>"; };
+		A5D6EE371CB515580081EF63 /* stone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stone.png; sourceTree = "<group>"; };
+		A5D6EE391CB5155D0081EF63 /* stone2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stone2.png; sourceTree = "<group>"; };
+		A5FCA8111CB5DCA300AB27F6 /* Blob-Monsters-Return_Looping.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Blob-Monsters-Return_Looping.mp3"; sourceTree = "<group>"; };
+		A5FCA8121CB5DCA300AB27F6 /* Dystopic-Factory_Looping.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Dystopic-Factory_Looping.mp3"; sourceTree = "<group>"; };
+		A5FCA8131CB5DCA300AB27F6 /* Farty-Crooks_Looping.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Farty-Crooks_Looping.mp3"; sourceTree = "<group>"; };
+		A5FCA8141CB5DCA300AB27F6 /* Funky-Gameplay_Looping.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Funky-Gameplay_Looping.mp3"; sourceTree = "<group>"; };
+		A5FCA8151CB5DCA300AB27F6 /* Mister-Sneakypants_Looping.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mister-Sneakypants_Looping.mp3"; sourceTree = "<group>"; };
+		A5FCA8161CB5DCA300AB27F6 /* Monkey-Island-Band_Looping.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Monkey-Island-Band_Looping.mp3"; sourceTree = "<group>"; };
+		A5FCA8171CB5DCA300AB27F6 /* Sector-Off-Limits_Looping.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sector-Off-Limits_Looping.mp3"; sourceTree = "<group>"; };
+		A5FCA8181CB5DCA300AB27F6 /* Self-Destruct-Sequence.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Self-Destruct-Sequence.mp3"; sourceTree = "<group>"; };
+		A5FCA8191CB5DCA300AB27F6 /* Sideburn-Squad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Sideburn-Squad.mp3"; sourceTree = "<group>"; };
+		A5FCA82E1CB5E66800AB27F6 /* SoundManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundManager.h; sourceTree = "<group>"; };
+		A5FCA82F1CB5E66800AB27F6 /* SoundManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundManager.m; sourceTree = "<group>"; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
 		B71F5909188484E7003F4D28 /* iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad.png; path = Icons/iPad.png; sourceTree = "<group>"; };
@@ -882,6 +907,10 @@
 		A55E6ABA1C93DCE5006F0FE5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5FCA8101CB5DCA300AB27F6 /* Audio */,
+				A5D6EE371CB515580081EF63 /* stone.png */,
+				A5D6EE391CB5155D0081EF63 /* stone2.png */,
+				A5D6EE361CB515490081EF63 /* stone */,
 				A5394B911CB2073A00272141 /* Video */,
 				A5394AFA1CB1D93100272141 /* cat */,
 				A5394AF81CB1D86400272141 /* BroadBeach_BG.png */,
@@ -981,20 +1010,54 @@
 		A5A191A71C9D3D110056C979 /* Meng final VIC SURV */ = {
 			isa = PBXGroup;
 			children = (
+				A5D6EE321CB4F9850081EF63 /* vic.png */,
+				A5D6EE341CB4F98B0081EF63 /* run.png */,
 				A5A191A81C9D3D110056C979 /* Background.png */,
 				A5A191A91C9D3D110056C979 /* cloud_1.png */,
 				A5A191AA1C9D3D110056C979 /* cloud_2.png */,
 				A5A191AB1C9D3D110056C979 /* cloud_3.png */,
 				A5A191AC1C9D3D110056C979 /* ocean-part.png */,
 				A5A191AD1C9D3D110056C979 /* surfer.png */,
-				A5A191AE1C9D3D110056C979 /* SURV.png */,
-				A5A191AF1C9D3D110056C979 /* VIC.png */,
 				A5A191B01C9D3D110056C979 /* Water_drop_1.png */,
 				A5A191B11C9D3D110056C979 /* Water_drop_2.png */,
 				A5A191B21C9D3D110056C979 /* Water_drop_3.png */,
 				A5A191B31C9D3D110056C979 /* Water_drop_4.png */,
 			);
 			path = "Meng final VIC SURV";
+			sourceTree = "<group>";
+		};
+		A5D6EE361CB515490081EF63 /* stone */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = stone;
+			path = Video/stone;
+			sourceTree = "<group>";
+		};
+		A5FCA8101CB5DCA300AB27F6 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				A5FCA8111CB5DCA300AB27F6 /* Blob-Monsters-Return_Looping.mp3 */,
+				A5FCA8121CB5DCA300AB27F6 /* Dystopic-Factory_Looping.mp3 */,
+				A5FCA8131CB5DCA300AB27F6 /* Farty-Crooks_Looping.mp3 */,
+				A5FCA8141CB5DCA300AB27F6 /* Funky-Gameplay_Looping.mp3 */,
+				A5FCA8151CB5DCA300AB27F6 /* Mister-Sneakypants_Looping.mp3 */,
+				A5FCA8161CB5DCA300AB27F6 /* Monkey-Island-Band_Looping.mp3 */,
+				A5FCA8171CB5DCA300AB27F6 /* Sector-Off-Limits_Looping.mp3 */,
+				A5FCA8181CB5DCA300AB27F6 /* Self-Destruct-Sequence.mp3 */,
+				A5FCA8191CB5DCA300AB27F6 /* Sideburn-Squad.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		A5FCA82B1CB5E65300AB27F6 /* SounderManager */ = {
+			isa = PBXGroup;
+			children = (
+				A5FCA82E1CB5E66800AB27F6 /* SoundManager.h */,
+				A5FCA82F1CB5E66800AB27F6 /* SoundManager.m */,
+			);
+			name = SounderManager;
+			path = Resources/Video/stone/SounderManager;
 			sourceTree = "<group>";
 		};
 		B737893C1807616C0076A88C /* Source */ = {
@@ -1032,6 +1095,7 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
+				A5FCA82B1CB5E65300AB27F6 /* SounderManager */,
 				A5394AEE1CB1211200272141 /* Helper */,
 				A5394AAB1CAFA71C00272141 /* RealSourceManager */,
 				A55E6B131C9664C3006F0FE5 /* VSConstant */,
@@ -1307,10 +1371,14 @@
 				A55E6ACE1C93DCE5006F0FE5 /* Triangle.png in Resources */,
 				A5394B751CB1D93100272141 /* Jump (3).png in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
+				A5FCA8221CB5DCA300AB27F6 /* Sideburn-Squad.mp3 in Resources */,
+				A5D6EE331CB4F9850081EF63 /* vic.png in Resources */,
+				A5FCA81A1CB5DCA300AB27F6 /* Blob-Monsters-Return_Looping.mp3 in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
 				A5394B841CB1D93100272141 /* Slide (9).png in Resources */,
 				A5394B8B1CB1D93100272141 /* Walk (6).png in Resources */,
 				A5A191B91C9D3D110056C979 /* surfer.png in Resources */,
+				A5FCA81F1CB5DCA300AB27F6 /* Monkey-Island-Band_Looping.mp3 in Resources */,
 				A5394B5F1CB1D93100272141 /* Hurt (1).png in Resources */,
 				B71F5913188484E7003F4D28 /* iPad.png in Resources */,
 				B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */,
@@ -1332,7 +1400,7 @@
 				A5394B551CB1D93100272141 /* Dead (8).png in Resources */,
 				A5394B951CB207F700272141 /* fish video test.mov in Resources */,
 				A5394B8A1CB1D93100272141 /* Walk (5).png in Resources */,
-				A5A191BB1C9D3D110056C979 /* VIC.png in Resources */,
+				A5D6EE381CB515580081EF63 /* stone.png in Resources */,
 				A5394B4E1CB1D93100272141 /* Dead (10).png in Resources */,
 				A5394B651CB1D93100272141 /* Hurt (6).png in Resources */,
 				A5394B611CB1D93100272141 /* Hurt (2).png in Resources */,
@@ -1350,23 +1418,27 @@
 				A5394B8D1CB1D93100272141 /* Walk (8).png in Resources */,
 				A5394B851CB1D93100272141 /* Walk (1).png in Resources */,
 				A5394B661CB1D93100272141 /* Hurt (7).png in Resources */,
+				A5FCA81B1CB5DCA300AB27F6 /* Dystopic-Factory_Looping.mp3 in Resources */,
 				A5394B541CB1D93100272141 /* Dead (7).png in Resources */,
 				A5394B471CB1D93100272141 /* cat_run(3).png in Resources */,
+				A5FCA81D1CB5DCA300AB27F6 /* Funky-Gameplay_Looping.mp3 in Resources */,
 				A5394ACF1CAFB77900272141 /* bottle5.png in Resources */,
 				A5394B741CB1D93100272141 /* Jump (2).png in Resources */,
 				A5394B621CB1D93100272141 /* Hurt (3).png in Resources */,
 				A5A191B51C9D3D110056C979 /* cloud_1.png in Resources */,
 				A5A191BC1C9D3D110056C979 /* Water_drop_1.png in Resources */,
+				A5D6EE351CB4F98B0081EF63 /* run.png in Resources */,
 				A5394B781CB1D93100272141 /* Jump (6).png in Resources */,
 				A5394B4D1CB1D93100272141 /* Dead (1).png in Resources */,
 				A5394B881CB1D93100272141 /* Walk (3).png in Resources */,
 				A5394B6F1CB1D93100272141 /* Idle (6).png in Resources */,
 				A55E6ADC1C941F40006F0FE5 /* Mud_Fish.png in Resources */,
+				A5D6EE3A1CB5155D0081EF63 /* stone2.png in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				A5394B581CB1D93100272141 /* Fall (2).png in Resources */,
 				A5394AF51CB1356A00272141 /* empty-green-button.png in Resources */,
 				A5394AF91CB1D86400272141 /* BroadBeach_BG.png in Resources */,
-				A5A191BA1C9D3D110056C979 /* SURV.png in Resources */,
+				A5FCA81C1CB5DCA300AB27F6 /* Farty-Crooks_Looping.mp3 in Resources */,
 				A5394B6D1CB1D93100272141 /* Idle (4).png in Resources */,
 				A5394B4A1CB1D93100272141 /* cat_run(6).png in Resources */,
 				A5A191BF1C9D3D110056C979 /* Water_drop_4.png in Resources */,
@@ -1400,6 +1472,7 @@
 				A5394B571CB1D93100272141 /* Fall (1).png in Resources */,
 				A55E6AC91C93DCE5006F0FE5 /* Circle.png in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
+				A5FCA8201CB5DCA300AB27F6 /* Sector-Off-Limits_Looping.mp3 in Resources */,
 				A55E6AC81C93DCE5006F0FE5 /* board bg.png in Resources */,
 				A5394B4C1CB1D93100272141 /* cat_run(8).png in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
@@ -1415,6 +1488,7 @@
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
 				A5394B6E1CB1D93100272141 /* Idle (5).png in Resources */,
 				A5394B761CB1D93100272141 /* Jump (4).png in Resources */,
+				A5FCA81E1CB5DCA300AB27F6 /* Mister-Sneakypants_Looping.mp3 in Resources */,
 				A5394B871CB1D93100272141 /* Walk (2).png in Resources */,
 				A5A191901C9A345C0056C979 /* bama.png in Resources */,
 				A55E6AC71C93DCE5006F0FE5 /* bg2.png in Resources */,
@@ -1423,6 +1497,7 @@
 				A5394B811CB1D93100272141 /* Slide (6).png in Resources */,
 				A5394B731CB1D93100272141 /* Jump (1).png in Resources */,
 				B7378977180762440076A88C /* Default.png in Resources */,
+				A5FCA8211CB5DCA300AB27F6 /* Self-Destruct-Sequence.mp3 in Resources */,
 				B71F5911188484E7003F4D28 /* iPad-old.png in Resources */,
 				A5394B5B1CB1D93100272141 /* Fall (5).png in Resources */,
 				A5A191B81C9D3D110056C979 /* ocean-part.png in Resources */,
@@ -1510,6 +1585,7 @@
 				A55E6B1A1C9674E9006F0FE5 /* BigStageLayer.m in Sources */,
 				7A046D8C19E8A20E004C4763 /* MainScene.m in Sources */,
 				5B121038197487F2004C1E1D /* AppDelegate.m in Sources */,
+				A5FCA8301CB5E66800AB27F6 /* SoundManager.m in Sources */,
 				A55E6B1D1C9674F9006F0FE5 /* SubStageLayer.m in Sources */,
 				A55E6AD51C941411006F0FE5 /* PollutionEventStandard.m in Sources */,
 				A55E69851C93DA53006F0FE5 /* RunningCharacter.m in Sources */,
@@ -1807,7 +1883,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Meng Lin Tsai (QJ3F6PE53X)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1842,7 +1918,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Meng Lin Tsai (QJ3F6PE53X)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

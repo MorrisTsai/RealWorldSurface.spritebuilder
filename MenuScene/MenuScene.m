@@ -12,6 +12,7 @@
 #import "RealSourceManager.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AVKit/AVKit.h>
+#import "SoundManager.h"
 @interface MenuScene ()<AVPlayerViewControllerDelegate>
 @end
 
@@ -91,6 +92,7 @@
     }];
     
    // [self performSelector:@selector(runVideo) withObject:nil afterDelay:5];
+    [[SoundManager shared]playBackgroundMusic];
     
 }
 
@@ -108,10 +110,29 @@
 }
 -(void)buildButtons
 {
-    gameButton = [CCButton buttonWithTitle:@"Start" fontName:nil fontSize:20];
-    [self addChild:gameButton];
-    gameButton.position = ccp(winSize.width*0.8, winSize.height*0.8);
-    [gameButton setTarget:self selector:@selector(gameButtonPressed)];
+    CCSprite* gg = [CCSprite spriteWithImageNamed:@"empty-green-button.png"];
+    dispatch_async(dispatch_get_main_queue(), ^(){
+                       gameButton = [CCButton buttonWithTitle:@"Start" fontName:@"AmericanTypewriter-CondensedBold" fontSize:30];
+                       // gameButton = [CCButton buttonWithTitle:@"Start" spriteFrame:gg.spriteFrame];
+                     //  gameButton.label.fontSize = 14;
+                    //gameButton.background.spriteFrame = gg.spriteFrame;
+                       [self addChild:gameButton z:2];
+                       gameButton.position = ccp(winSize.width*0.8, winSize.height*0.8);
+                       [gameButton setTarget:self selector:@selector(gameButtonPressed)];
+        
+            CCNodeColor* backgroundNode = [CCNodeColor nodeWithColor:[CCColor greenColor]];
+            backgroundNode.contentSize = gameButton.contentSize;
+            [self addChild:backgroundNode z:1];
+            backgroundNode.position = gameButton.position;
+            backgroundNode.anchorPoint = ccp(0.5, 0.5);
+        
+                   });
+    
+   
+   // gameButton.background.color = [CCColor greenColor];
+   // gameButton.label.fontColor = [CCColor redColor];
+    
+  
 }
 -(void)buildGround
 {
@@ -176,17 +197,17 @@
 }
 -(void)leftIn
 {
-    CCSprite* left= [CCSprite spriteWithImageNamed:@"VIC.png"];
+    CCSprite* left= [CCSprite spriteWithImageNamed:@"vic.png"];
     [self addChild:left];
-    left.scale *= 0.2;
+    left.scale *= 0.5;
     left.position = ccp(-left.contentSize.width/2, self.contentSize.height*0.8);
     CCActionMoveTo* mt = [CCActionMoveTo actionWithDuration:0.3 position:ccp(self.contentSize.width*0.2, self.contentSize.height*0.8)];
     [left runAction:mt];
 }
 -(void)rightIn
 {
-    CCSprite* right= [CCSprite spriteWithImageNamed:@"SURV.png"];
-    right.scale *= 0.2;
+    CCSprite* right= [CCSprite spriteWithImageNamed:@"run.png"];
+    right.scale *= 0.5;
     [self addChild:right];
     right.position = ccp(self.contentSize.width + right.contentSize.width/2, self.contentSize.height*0.6);
     CCActionMoveTo* mt = [CCActionMoveTo actionWithDuration:0.3 position:ccp(self.contentSize.width*0.4, self.contentSize.height*0.6)];

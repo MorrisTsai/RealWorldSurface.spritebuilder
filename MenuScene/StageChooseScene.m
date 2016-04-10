@@ -141,6 +141,8 @@
 }
 -(void)buildStageList
 {
+    dispatch_async(dispatch_get_main_queue(), ^(){
+
     
     backButton = [CCButton buttonWithTitle:@"BACK" fontName:nil fontSize:14];
     [self addChild:backButton];
@@ -167,7 +169,7 @@
         //button.preferredSize = CGSizeMake(winSize.width*0.8, height);
         button.scaleX = winSize.width*0.75/button.contentSize.width;
         button.scaleY = height/button.contentSize.height;
-        CCLabelTTF* nameLabel = [CCLabelTTF labelWithString:thisModel.stageName fontName:nil fontSize:9];
+        CCLabelTTF* nameLabel = [CCLabelTTF labelWithString:thisModel.stageName fontName:nil fontSize:13];
         nameLabel.fontColor = [CCColor redColor];
       
      //   button.position = ccp(self.contentSize.width/2, self.contentSize.height/2 + 20*i);
@@ -193,8 +195,8 @@
     scrollView.scrollPosition = CGPointZero;
     [shader addChild: scrollView z:1000];
    // [self textViewShow:NO];
-
-    }
+    });
+}
 -(void)stageChosed:(CCButton*)sender
 {
     int index = [sender.name intValue];

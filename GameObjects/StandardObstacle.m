@@ -18,11 +18,19 @@ static int counter = 0;
     self = [super init];
     if (self) {
         self.hitted = NO;
-        self.myView = [CCSprite spriteWithImageNamed:@"Rectangle.png"];
+        if(arc4random()%2 == 0)
+        {
+            self.myView = [CCSprite spriteWithImageNamed:@"stone.png"];
+        }
+        else
+        {
+             self.myView = [CCSprite spriteWithImageNamed:@"stone2.png"];
+        }
         [self addChild:self.myView];
         self.contentSize = size;
       //  self.contentSize = self.myView.contentSize;
-        self.myView.scale = size.width/self.myView.contentSize.width;
+        self.myView.scaleX = size.width/self.myView.contentSize.width;
+        self.myView.scaleY = size.height/self.myView.contentSize.height;
         self.myView.position = ccp(self.contentSize.width/2, self.contentSize.height/2);
         self.anchorPoint = ccp(0.5, 0.5);
         self.damage = 1;

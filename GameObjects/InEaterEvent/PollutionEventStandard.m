@@ -45,6 +45,10 @@
 }
 -(BOOL)creatrueCollide:(StandCreature *)creature
 {
+    if(self.parent.position.x <= 20)
+    {
+        return NO;
+    }
     CGPoint pivot = [self convertToNodeSpace:[creature.parent convertToWorldSpace:creature.boundingBox.origin]];
     CGRect rect = CGRectMake(pivot.x, pivot.y, creature.contentSize.width, creature.contentSize.height);
     for(PollutionStandard* thisPollution in pollutionNodes)
