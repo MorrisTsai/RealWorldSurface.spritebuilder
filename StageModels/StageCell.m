@@ -18,7 +18,8 @@
     self = [super init];
     if (self) {
         self.contentSize = size;
-        background = [CCSprite spriteWithImageNamed:@"cleanRate0.png"];
+        int rate =(((model.garbagePercentage+model.waterPercentage)/2)/25)*25;
+        background = [CCSprite spriteWithImageNamed:[NSString stringWithFormat:@"cleanRate%d.png",rate]];
         [self addChild:background z:-1];
         self.anchorPoint = ccp(0.5, 0.5);
         background.position = ccp(self.contentSize.width/2, self.contentSize.height/2);
@@ -26,10 +27,12 @@
         background.scale = size.width/background.contentSize.width;
         [self setUserInteractionEnabled:YES];
         
-        border = [CCSprite spriteWithImageNamed:@"cleanRate0Border.png"];
+        border = [CCSprite spriteWithImageNamed:[NSString stringWithFormat:@"cleanRate%dBorder.png",rate]];
         [self addChild:border z:-2];
         border.position = background.position;
         border.scale = background.scale*1.1;
+        
+      
         
         
     }

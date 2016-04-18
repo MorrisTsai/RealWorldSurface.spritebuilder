@@ -49,12 +49,20 @@
 }
 -(int)waterPercentage
 {
+    if(!self.isWaterEnable)
+    {
+        return self.garbagePercentage;
+    }
     NSString* key = [NSString stringWithFormat:@"%@Water",self.stageName];
     int value = [[[NSUserDefaults standardUserDefaults]objectForKey:key]intValue];
     return value;
 }
 -(int)garbagePercentage
 {
+    if(!self.isGarbageEnable)
+    {
+        return self.waterPercentage;
+    }
     NSString* key = [NSString stringWithFormat:@"%@Garbage",self.stageName];
     int value = [[[NSUserDefaults standardUserDefaults]objectForKey:key]intValue];
     return value;
@@ -112,11 +120,13 @@
 -(int)garbageConstant
 {
     int returnInt = sqrt(ox*ni*ph*20)*10;
+    returnInt = self.isWaterEnable ? returnInt : returnInt/2;
     return returnInt < 2 ? returnInt : 2;
 }
 -(int)pollutionConstant
 {
-    return  23 - sqrt(min+ max);
+    int returnValue = (23 - sqrt(min+ max))/2;
+    return  (self.isGarbageEnable ? returnValue : returnValue / 2);
 }
 -(int)randNumberOfPOllutionNumbers
 {

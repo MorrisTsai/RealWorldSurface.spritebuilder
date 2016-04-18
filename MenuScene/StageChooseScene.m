@@ -66,9 +66,9 @@
     contentNode.position = ccp(winSize.width/2, winSize.height/2);
     contentNode.contentSize = CGSizeMake(winSize.width/2, winSize.height/2);
     contentNode.anchorPoint = ccp(0.5, 0.5);
-    CCLabelTTF* label = [CCLabelTTF labelWithString:@"Loading..." fontName:nil fontSize:20];
-    [contentNode addChild:label];
-    label.position = ccp(contentNode.contentSize.width/2, contentNode.contentSize.height/2);
+//    CCLabelTTF* label = [CCLabelTTF labelWithString:@"Loading..." fontName:nil fontSize:20];
+//    [contentNode addChild:label];
+//    label.position = ccp(contentNode.contentSize.width/2, contentNode.contentSize.height/2);
 }
 
 -(void)buildButtons

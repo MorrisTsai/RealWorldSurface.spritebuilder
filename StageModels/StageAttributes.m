@@ -84,8 +84,19 @@
     typeLabel.position = ccpAdd(titleLabel.position, ccp(0, -titleLabel.contentSize.height - typeLabel.contentSize.height/2));
     
     
+    int rate =(((self.myModel.garbagePercentage+self.myModel.waterPercentage)/2)/25)*25;
+    CCSprite* trophy = [CCSprite spriteWithImageNamed:[NSString stringWithFormat:@"cleanRate%d.png",rate]];
+    trophy.scale = self.contentSize.width/5 / trophy.contentSize.width;
+    [self addChild:trophy];
+    trophy.position = ccp(self.contentSize.width/2, self.contentSize.height/2);
+   
+    CCLabelTTF* percentage = [CCLabelTTF labelWithString: [NSString stringWithFormat:@"%.2f%% Clean",(self.myModel.garbagePercentage+self.myModel.waterPercentage)*1.0/2] fontName:nil fontSize:14];
+    [self addChild:percentage];
+    percentage.position = ccp(self.contentSize.width/2, self.contentSize.height*0.3);
+    
     
 }
+
 -(void)buildBackground
 {
     
