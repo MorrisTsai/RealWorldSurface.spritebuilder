@@ -119,13 +119,13 @@
 }
 -(int)garbageConstant
 {
-    int returnInt = sqrt(ox*ni*ph*20)*10;
+    int returnInt = sqrt(ox*ni*ph*20)*10/self.garbagePercentage;
     returnInt = self.isWaterEnable ? returnInt : returnInt/2;
     return returnInt < 2 ? returnInt : 2;
 }
 -(int)pollutionConstant
 {
-    int returnValue = (23 - sqrt(min+ max))/2;
+    int returnValue = (23 - sqrt(min+ max))/2 / self.waterPercentage;
     return  (self.isGarbageEnable ? returnValue : returnValue / 2);
 }
 -(int)randNumberOfPOllutionNumbers
