@@ -74,7 +74,7 @@
         PollutionStandard* pollution = [pollutionNodes objectAtIndex:i];
         
         //if(CGRectIntersectsRect(pollution.boundingBox, checkSwipeRect))
-        if(ccpDistance(touchPoint, pollution.position) < 10)
+        if(ccpDistance(touchPoint, pollution.position) < 15)
         {
             [pollution die];
             [pollutionNodes removeObject:pollution];

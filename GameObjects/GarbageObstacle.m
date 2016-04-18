@@ -38,7 +38,7 @@
     self.myView.scaleY = self.contentSize.height/self.myView.contentSize.height;
    // self.myView.scale = 1;
     
-    
+    self.myView.color = [CCColor whiteColor];
     
 }
 -(BOOL)checkTouched:(CCTouch *)touch
@@ -66,7 +66,8 @@
 -(void)pickedUp
 {
     self.hitted = YES;
-    [self removeFromParentAndCleanup:YES];
+   // [self removeFromParentAndCleanup:YES];
+    [self.delegate obstalceCollected:self];
 }
 
 @end

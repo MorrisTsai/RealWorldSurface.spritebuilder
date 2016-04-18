@@ -17,11 +17,11 @@ static SoundManager* sharedManager;
 }
 -(void)pauseBackgroundMusic
 {
-    [[OALSimpleAudio sharedInstance]paused];
+    [OALSimpleAudio sharedInstance].bgPaused = YES;
 }
 -(void)resumeBackgroundMusic
 {
-    [[OALSimpleAudio sharedInstance] playBg];
+    [OALSimpleAudio sharedInstance].bgPaused = NO;
 }
 
 

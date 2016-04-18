@@ -77,18 +77,11 @@
     [self buildGround];
     [self schedule:@selector(groundMove) interval:0.01];
   
-       [[RealSourceManager shared]checkDataNumberFromServerWithCompletionHandler:^(BOOL ok)
+    [[RealSourceManager shared]listDailyStageFromServerWithCompletionHandler:^(BOOL ok)
     {
+    
          [self buildButtons];
-        if(![RealSourceManager shared].regionArray)
-        {
-            
-            [[RealSourceManager shared]listAllRegionFromServerWithCompletionHandler:^(BOOL ok)
-             {
-                 
-             }];
-        }
-
+        
     }];
     
    // [self performSelector:@selector(runVideo) withObject:nil afterDelay:5];
@@ -109,7 +102,7 @@
     [self runAction:seq];
 }
 -(void)buildButtons
-{
+{//
     CCSprite* gg = [CCSprite spriteWithImageNamed:@"empty-green-button.png"];
     dispatch_async(dispatch_get_main_queue(), ^(){
                        gameButton = [CCButton buttonWithTitle:@"Start" fontName:@"AmericanTypewriter-CondensedBold" fontSize:30];
@@ -120,11 +113,18 @@
                        gameButton.position = ccp(winSize.width*0.8, winSize.height*0.8);
                        [gameButton setTarget:self selector:@selector(gameButtonPressed)];
         
-            CCNodeColor* backgroundNode = [CCNodeColor nodeWithColor:[CCColor greenColor]];
-            backgroundNode.contentSize = gameButton.contentSize;
-            [self addChild:backgroundNode z:1];
-            backgroundNode.position = gameButton.position;
-            backgroundNode.anchorPoint = ccp(0.5, 0.5);
+//            CCNodeColor* backgroundNode = [CCNodeColor nodeWithColor:[CCColor greenColor]];
+//            backgroundNode.contentSize = gameButton.contentSize;
+//            [self addChild:backgroundNode z:1];
+//            backgroundNode.position = gameButton.position;
+//            backgroundNode.anchorPoint = ccp(0.5, 0.5);
+        
+        CCSprite* buttonBackground = [CCSprite spriteWithImageNamed:@"ButtonBlue_T.png"];
+        buttonBackground.scaleX = gameButton.contentSize.width/buttonBackground.contentSize.width;
+        buttonBackground.scaleY = gameButton.contentSize.height/buttonBackground.contentSize.height;
+        [self addChild:buttonBackground];
+        buttonBackground.position = gameButton.position;
+        
         
                    });
     

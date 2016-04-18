@@ -15,16 +15,15 @@
     int half;
     int threeQ;
     int max;
-    
-    
-    
     double ni;
     double ox;
     double ph;
 }
-
+@synthesize waterPercentage = _waterPercentage;
+@synthesize garbagePercentage = _garbagePercentage;
 - (instancetype)initAttribute:(NSDictionary*)attribute;
 {
+   
     self = [super init];
     if (self) {
         min = [[attribute objectForKey:Minumun]intValue];
@@ -36,9 +35,71 @@
         ni = [[attribute objectForKey:Ni50]doubleValue];
         ox = [[attribute objectForKey:Ox50]doubleValue];
         ph = [[attribute objectForKey:Ph50]doubleValue];
+        
+        self.locationX = [[attribute objectForKey:@"x"]doubleValue];
+        self.locationY = [[attribute objectForKey:@"y"]doubleValue];
+        
+        self.isGarbageEnable = [[attribute objectForKey:@"garbage_active"]intValue];
+        self.isWaterEnable = [[attribute objectForKey:@"water_active"]intValue];
+        
         self.stageName = [attribute objectForKey:SubRegionName];
+        self.type = self.isGarbageEnable*2 + self.isWaterEnable;
     }
     return self;
+}
+-(int)waterPercentage
+{
+    NSString* key = [NSString stringWithFormat:@"%@Water",self.stageName];
+    int value = [[[NSUserDefaults standardUserDefaults]objectForKey:key]intValue];
+    return value;
+}
+-(int)garbagePercentage
+{
+    NSString* key = [NSString stringWithFormat:@"%@Garbage",self.stageName];
+    int value = [[[NSUserDefaults standardUserDefaults]objectForKey:key]intValue];
+    return value;
+
+}
+-(void)setWaterPercentage:(int)waterPercentage
+{
+    NSString* key = [NSString stringWithFormat:@"%@Water",self.stageName];
+    _waterPercentage = waterPercentage;
+    if(_waterPercentage > 100)
+    {
+        _waterPercentage = 100;
+    }
+    [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%d",_waterPercentage] forKey:key];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    
+}
+-(void)setGarbagePercentage:(int)garbagePercentage
+{
+    NSString* key = [NSString stringWithFormat:@"%@Garbage",self.stageName];
+    _garbagePercentage = garbagePercentage;
+    if(_garbagePercentage > 100)
+    {
+        _garbagePercentage = 100;
+    }
+    [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%d",_garbagePercentage] forKey:key];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+}
+
+-(NSString *)stageTypeString
+{
+    switch (self.type) {
+        case StageType_Water:
+            return @"Water";
+            break;
+        case StageType_Garbage:
+            return @"Garbage";
+            break;
+        case StageType_Hybrid:
+            return @"Hybrid";
+            break;
+        default:
+            break;
+    }
+    return @"Unknown";
 }
 -(int)creatureConstant
 {
@@ -50,12 +111,12 @@
 }
 -(int)garbageConstant
 {
-    int returnInt =ox*ni*ph*20;
+    int returnInt = sqrt(ox*ni*ph*20)*10;
     return returnInt < 2 ? returnInt : 2;
 }
 -(int)pollutionConstant
 {
-    return  20 - sqrt(min+ max);
+    return  23 - sqrt(min+ max);
 }
 -(int)randNumberOfPOllutionNumbers
 {

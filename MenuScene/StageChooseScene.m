@@ -12,27 +12,37 @@
 #import "VSConstant.h"
 #import "RealSourceManager.h"
 #import "ScrollViewBoundaryShader.h"
+#import "RealSourceManager.h"
+#import "StageCell.h"
+#import "StageAttributes.h"
 #define MARGIN 7
 #define TOP_MARGIN 14
+
+@interface StageChooseScene ()<StageCellDelegate>
+
+@end
 @implementation StageChooseScene
 {
     CCButton* gameButton;
     CCSprite* background;
-    NSMutableArray* stagesArray;
     CGSize winSize;
     CCNode* contentNode;
     CCButton* backButton;
     ScrollViewBoundaryShader* shader;
+    StageAttributes * chosedStageAttrubites;
+    
+    CGPoint prevTouchPoint;
+    CGPoint oriMapPosition;
 }
 - (instancetype)init
 {
     self = [super init];
     if (self) {
         winSize = [CCDirector sharedDirector].viewSize;
-        background = [CCSprite spriteWithImageNamed:@"green-forest-and-hills-background_PNG.png"];
+        background = [CCSprite spriteWithImageNamed:@"stasticmap.png"];
         [self addChild:background];
         background.position = ccp(winSize.width/2,winSize.height/2);
-        stagesArray = [NSMutableArray array];
+        [self setUserInteractionEnabled:YES];
     }
     return self;
 }
@@ -41,41 +51,12 @@
     
     [super onEnter];
     [self checkData];
-   // [self buildStageList];
+    [self buildStageList];
 }
 -(void)checkData
 {
     [self showLoading];
-    if(![RealSourceManager shared].regionArray)
-    {
-        
-        [[RealSourceManager shared]listAllRegionFromServerWithCompletionHandler:^(BOOL ok)
-         {
-             [self buildRegion];
-         }];
-    }
-    else
-    {
-        [self buildRegion];
-    }
 
-}
--(void)buildRegion
-{
-    [contentNode removeAllChildrenWithCleanup:YES];
-    for(int i = 0 ; i < [[RealSourceManager shared].regionArray count];i++)
-    {
-        NSDictionary* thisArea = [[RealSourceManager shared].regionArray objectAtIndex:i];
-        NSString* areaName = [thisArea objectForKey:AreaName];
-        NSString* areaKey = [thisArea objectForKey:AreaKey];
-        CCButton* thisButton = [CCButton buttonWithTitle:areaName fontName:nil fontSize:13];
-        [contentNode addChild:thisButton];
-        thisButton.position = ccp(contentNode.contentSize.width/2, (i+1)*(contentNode.contentSize.height/([[RealSourceManager shared].regionArray count]+1)));
-        thisButton.name = areaKey;
-        [thisButton setTarget:self selector:@selector(areaButtonPressed:)];
-        
-        
-    }
 }
 -(void)showLoading
 {
@@ -88,34 +69,6 @@
     CCLabelTTF* label = [CCLabelTTF labelWithString:@"Loading..." fontName:nil fontSize:20];
     [contentNode addChild:label];
     label.position = ccp(contentNode.contentSize.width/2, contentNode.contentSize.height/2);
-}
--(void)areaButtonPressed:(CCButton*)sender;
-{
-    NSString* key = sender.name;
-    [self showLoading];
-    NSArray* subRegionInformation = [[[RealSourceManager shared]getSubRegionArrayByAreaId:key]mutableCopy];
-    if([subRegionInformation count] == 0)
-    {
-        [[RealSourceManager shared]listDataWithAreaId:key withCompletionHandler:^(BOOL ok)
-         {
-             if(ok)
-             {
-                 [self areaButtonPressed:sender];
-             }
-         }];
-    }
-    else
-    {
-        [stagesArray removeAllObjects];
-        for(int i = 0 ; i < [subRegionInformation count]; i ++)
-        {
-            NSDictionary* info = [subRegionInformation objectAtIndex:i];
-            StageModels* model = [[StageModels alloc]initAttribute:info];
-              [stagesArray addObject:model];
-        }
-        [self buildStageList];
-    }
-   
 }
 
 -(void)buildButtons
@@ -137,7 +90,7 @@
     [shader removeFromParentAndCleanup:YES];
     [backButton removeFromParentAndCleanup:YES];
     [self showLoading];
-    [self buildRegion];
+  //  [self buildRegion];
 }
 -(void)buildStageList
 {
@@ -154,53 +107,103 @@
     int height = 30;
     int space = 5;
     shader = [[ScrollViewBoundaryShader alloc]init];
-    shader.contentSize = CGSizeMake(self.contentSize.width*0.9, self.contentSize.height*0.9);
+    shader.contentSize = CGSizeMake(self.contentSize.width*0.9, self.contentSize.height*0.8);
     [self addChild:shader];
-    shader.position = ccp(self.contentSize.width*0.1, self.contentSize.height*0.1);
+    shader.position = ccp(self.contentSize.width*0.05, self.contentSize.height*0.1);
 
-    scrollContent.contentSize = CGSizeMake(contentNode.contentSize.width, ([stagesArray count]+2) * (height + space));
-     CCSprite* image = [CCSprite spriteWithImageNamed:@"empty-green-button.png"];
-    for(int i = 0 ; i < [stagesArray count]; i++)
+    scrollContent.contentSize = CGSizeMake(contentNode.contentSize.width, ([[RealSourceManager shared].dailyStages count]+2) * (height + space));
+     CCSprite* image = [CCSprite spriteWithImageNamed:@"ButtonBlue_T.png"];
+    for(int i = 0 ; i < [[RealSourceManager shared].dailyStages count]; i++)
     {
-        
-        StageModels* thisModel = [stagesArray objectAtIndex:i];
-       
-        CCButton* button = [CCButton buttonWithTitle:@"" spriteFrame:image.spriteFrame];
-        //button.preferredSize = CGSizeMake(winSize.width*0.8, height);
-        button.scaleX = winSize.width*0.75/button.contentSize.width;
-        button.scaleY = height/button.contentSize.height;
-        CCLabelTTF* nameLabel = [CCLabelTTF labelWithString:thisModel.stageName fontName:nil fontSize:13];
-        nameLabel.fontColor = [CCColor redColor];
-      
-     //   button.position = ccp(self.contentSize.width/2, self.contentSize.height/2 + 20*i);
-        button.name = [NSString stringWithFormat:@"%d",i];
-     
-        [button setTarget:self selector:@selector(stageChosed:)];
-        
-        button.position = ccp(button.contentSize.width/2 + MARGIN, scrollContent.contentSize.height - (i + 1) * (height + space));
-        nameLabel.position = button.position;
-        [scrollContent addChild:button];
-        [scrollContent addChild:nameLabel];
+
+        StageModels* thisModel = [[RealSourceManager shared].dailyStages objectAtIndex:i];
+        StageCell* thisCell = [[StageCell alloc]initWithSize:CGSizeMake(40, 40) andStageModel:thisModel];
+        [background addChild:thisCell];
+        thisCell.position = ccp(thisModel.locationX, background.contentSize.height - thisModel.locationY);
+        thisCell.delegate = self;
+//       
+//        CCButton* button = [CCButton buttonWithTitle:@"" spriteFrame:image.spriteFrame];
+//        //button.preferredSize = CGSizeMake(winSize.width*0.8, height);
+//        button.scaleX = winSize.width*0.75/button.contentSize.width;
+//        button.scaleY = height/button.contentSize.height;
+//        CCLabelTTF* nameLabel = [CCLabelTTF labelWithString:thisModel.stageName fontName:@"AmericanTypewriter-CondensedBold" fontSize:14];
+//        nameLabel.fontColor = [CCColor greenColor];
+//      
+//     //   button.position = ccp(self.contentSize.width/2, self.contentSize.height/2 + 20*i);
+//        button.name = [NSString stringWithFormat:@"%d",i];
+//     
+//        [button setTarget:self selector:@selector(stageChosed:)];
+//        
+//        button.position = ccp(shader.contentSize.width/2 , scrollContent.contentSize.height - (i + 1) * (height + space));
+//        nameLabel.position = button.position;
+//        [scrollContent addChild:button];
+//        [scrollContent addChild:nameLabel];
       
     }
     
     
-    CCScrollView* scrollView = [[CCScrollView alloc] initWithContentNode:scrollContent];
-    scrollView.contentSizeType = CCSizeTypePoints;
-    scrollView.contentSize = shader.contentSize;
-    scrollView.anchorPoint = ccp(0,0);
-    scrollView.position = ccp(0, -10);
-    scrollView.horizontalScrollEnabled = NO;
-    scrollView.verticalScrollEnabled = YES;
-    scrollView.scrollPosition = CGPointZero;
-    [shader addChild: scrollView z:1000];
+//    CCScrollView* scrollView = [[CCScrollView alloc] initWithContentNode:scrollContent];
+//    scrollView.contentSizeType = CCSizeTypePoints;
+//    scrollView.contentSize = shader.contentSize;
+//    scrollView.anchorPoint = ccp(0,0);
+//    scrollView.position = ccp(0, -10);
+//    scrollView.horizontalScrollEnabled = NO;
+//    scrollView.verticalScrollEnabled = YES;
+//    scrollView.scrollPosition = CGPointZero;
+//    [shader addChild: scrollView z:1000];
    // [self textViewShow:NO];
     });
+}
+-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+{
+   prevTouchPoint = [self convertToNodeSpace:touch.locationInWorld];
+}
+-(void)touchMoved:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+{
+    CGPoint currentTouch = [self convertToNodeSpace:touch.locationInWorld];
+    CGPoint pointMove = ccp(currentTouch.x - prevTouchPoint.x, currentTouch.y - prevTouchPoint.y);
+    CGPoint newLocation = ccpAdd(background.position, pointMove);
+    prevTouchPoint = currentTouch;
+    if(newLocation.y + background.contentSize.height/2 < winSize.height )
+    {
+        newLocation.y =  background.position.y;
+    }
+    else if (newLocation.y - background.contentSize.height/2 > 0)
+    {
+        newLocation.y =  background.position.y;
+
+    }
+    if (newLocation.x + background.contentSize.width/2 < winSize.width)
+    {
+        newLocation.x =  background.position.x;
+    }
+    else if (newLocation.x - background.contentSize.width/2 > 0)
+    {
+         newLocation.x =  background.position.x;
+    }
+    
+        background.position = newLocation;
+    
+    
+}
+-(void)touchEnded:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+{
+    [chosedStageAttrubites removeFromParentAndCleanup:YES];
+}
+-(void)stageCellClicked:(StageCell *)stageCell
+{
+//    GameMainScene* game = [[GameMainScene alloc]initWithModel:stageCell.myModel];
+//    [[CCDirector sharedDirector]replaceScene:game withTransition:[CCTransition transitionFadeWithDuration:1]];
+    [chosedStageAttrubites removeFromParentAndCleanup:YES];
+    chosedStageAttrubites = [[StageAttributes alloc]initWithStageModel:stageCell.myModel];
+    [self addChild:chosedStageAttrubites];
+    chosedStageAttrubites.position = ccp(self.contentSize.width/2,self.contentSize.height/2);
+    
 }
 -(void)stageChosed:(CCButton*)sender
 {
     int index = [sender.name intValue];
-    StageModels* thisStage = [stagesArray objectAtIndex:index];
+    StageModels* thisStage = [[RealSourceManager shared].dailyStages objectAtIndex:index];
     GameMainScene* game = [[GameMainScene alloc]initWithModel:thisStage];
     [[CCDirector sharedDirector]replaceScene:game withTransition:[CCTransition transitionFadeWithDuration:1]];
 }

@@ -20,12 +20,13 @@ static int counter = 0;
         self.hitted = NO;
         if(arc4random()%2 == 0)
         {
-            self.myView = [CCSprite spriteWithImageNamed:@"stone.png"];
+            self.myView = [CCSprite spriteWithImageNamed:@"Stone_T.png"];
         }
         else
         {
-             self.myView = [CCSprite spriteWithImageNamed:@"stone2.png"];
+             self.myView = [CCSprite spriteWithImageNamed:@"Stone2_T.png"];
         }
+        self.myView.color = [CCColor brownColor];
         [self addChild:self.myView];
         self.contentSize = size;
       //  self.contentSize = self.myView.contentSize;

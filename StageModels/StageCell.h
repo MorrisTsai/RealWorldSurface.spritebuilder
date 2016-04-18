@@ -8,7 +8,13 @@
 
 #import "CCNode.h"
 #import "StageModels.h"
+@class StageCell;
+@protocol StageCellDelegate
+-(void)stageCellClicked:(StageCell*)stageCell;
+@end
 @interface StageCell : CCNode
-
+- (instancetype)initWithSize:(CGSize)size andStageModel:(StageModels*)model;
 @property StageModels* myModel;
+
+@property (nonatomic, weak) id<StageCellDelegate>delegate;
 @end

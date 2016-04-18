@@ -43,7 +43,7 @@
 }
 -(void)buildView
 {
-    view = [CCNodeColor nodeWithColor:[CCColor grayColor]];
+    view = [CCNodeColor nodeWithColor:[CCColor cyanColor]];
     view.contentSize = self.contentSize;
     [self addChild:view];
     view.position = ccp(self.contentSize.width/2, self.contentSize.height/2);

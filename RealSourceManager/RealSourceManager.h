@@ -12,7 +12,7 @@
 {
     NSOperationQueue* operationQueue;
 }
-@property (nonatomic, readonly) NSArray* regionArray;
+@property (nonatomic,strong) NSArray* dailyStages;
 
 #pragma mark Client Method
 -(NSArray*)getSubRegionArrayByAreaId:(NSString*)areaId;
@@ -22,5 +22,6 @@
 -(void)checkDataNumberFromServerWithCompletionHandler: (void (^)(BOOL errorMessage)) completionHandler;
 -(void)listAllRegionFromServerWithCompletionHandler: (void (^)(BOOL errorMessage)) completionHandler;
 -(void)listDataWithAreaId:(NSString*)areaId  withCompletionHandler: (void (^)(BOOL errorMessage)) completionHandler;
+-(void)listDailyStageFromServerWithCompletionHandler: (void (^)(BOOL errorMessage)) completionHandler;
 +(RealSourceManager*)shared;
 @end

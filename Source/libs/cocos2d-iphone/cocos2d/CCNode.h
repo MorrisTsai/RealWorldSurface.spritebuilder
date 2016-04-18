@@ -32,6 +32,8 @@
 #import "CCResponder.h"
 #import "CCScheduler.h"
 #import "CCRenderer.h"
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 
 @class CCScene;
