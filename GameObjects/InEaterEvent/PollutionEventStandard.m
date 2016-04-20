@@ -8,6 +8,7 @@
 
 #import "PollutionEventStandard.h"
 #import "PollutionStandard.h"
+#import "SoundManager.h"
 
 
 @implementation PollutionEventStandard

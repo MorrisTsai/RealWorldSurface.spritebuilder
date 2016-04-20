@@ -9,8 +9,18 @@
 #import "SoundManager.h"
 static SoundManager* sharedManager;
 @implementation SoundManager
+{
+    BOOL playingScratch;
+}
 
-
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        playingScratch = NO;
+    }
+    return self;
+}
 -(void)playBackgroundMusic
 {
      [[OALSimpleAudio sharedInstance]playBg:@"Monkey-Island-Band_Looping.mp3" loop:YES];
@@ -25,7 +35,39 @@ static SoundManager* sharedManager;
 }
 
 
+-(void)buttonEffect
+{
+    
+}
+-(void)playMenuMusic
+{
+     [[OALSimpleAudio sharedInstance]playBg:@"mainMenu1.wav" loop:YES];
+}
+-(void)playMapMusic
+{
+    [[OALSimpleAudio sharedInstance]playBg:@"mainMenu2.wav" loop:YES];
+}
 
+-(void)jumpEffect
+{
+    [[OALSimpleAudio sharedInstance]playEffect:@"jump.wav"];
+}
+-(void)pickEffect
+{
+    [[OALSimpleAudio sharedInstance]playEffect:@"pick.wav"];
+    
+}
+-(void)scratchEffect
+{
+    if(!playingScratch)
+    {
+        [[OALSimpleAudio sharedInstance]playEffect:@"scratch.mp3"];
+        playingScratch = YES;
+        [self scheduleBlock:^(CCTimer* timer){
+            playingScratch = NO;
+        }delay:0.2];
+    }
+}
 
 
 

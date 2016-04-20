@@ -15,6 +15,7 @@
 #import "RealSourceManager.h"
 #import "StageCell.h"
 #import "StageAttributes.h"
+#import "SoundManager.h"
 #define MARGIN 7
 #define TOP_MARGIN 14
 
@@ -52,6 +53,7 @@
     [super onEnter];
     [self checkData];
     [self buildStageList];
+    [[SoundManager shared]playMapMusic];
 }
 -(void)checkData
 {

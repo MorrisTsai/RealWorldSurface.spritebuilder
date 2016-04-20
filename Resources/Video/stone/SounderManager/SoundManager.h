@@ -13,8 +13,14 @@
 -(void)playBackgroundMusic;
 -(void)resumeBackgroundMusic;
 -(void)pauseBackgroundMusic;
+-(void)playMapMusic;
 
+-(void)playMenuMusic;
 
+-(void)jumpEffect;
+-(void)buttonEffect;
+-(void)pickEffect;
+-(void)scratchEffect;
 
 +(SoundManager*)shared;
 @end

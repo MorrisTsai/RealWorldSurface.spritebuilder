@@ -209,6 +209,21 @@
 		A5A191BF1C9D3D110056C979 /* Water_drop_4.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191B31C9D3D110056C979 /* Water_drop_4.png */; };
 		A5AA53CB1CC450BD00110B18 /* Stone_T.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AA53C91CC450BD00110B18 /* Stone_T.png */; };
 		A5AA53CC1CC450BD00110B18 /* Stone2_T.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AA53CA1CC450BD00110B18 /* Stone2_T.png */; };
+		A5AA53E91CC59F2700110B18 /* collectGarbage1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AA53E21CC59F2700110B18 /* collectGarbage1.png */; };
+		A5AA53EA1CC59F2700110B18 /* collectGarbage2.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AA53E31CC59F2700110B18 /* collectGarbage2.png */; };
+		A5AA53EB1CC59F2700110B18 /* jumpOverStone1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AA53E41CC59F2700110B18 /* jumpOverStone1.png */; };
+		A5AA53EC1CC59F2700110B18 /* jumpOverStone2.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AA53E51CC59F2700110B18 /* jumpOverStone2.png */; };
+		A5AA53ED1CC59F2700110B18 /* swipeToClean1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AA53E61CC59F2700110B18 /* swipeToClean1.png */; };
+		A5AA53EE1CC59F2700110B18 /* swipeToClean2.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AA53E71CC59F2700110B18 /* swipeToClean2.png */; };
+		A5AA53EF1CC59F2700110B18 /* swipeToClean3.png in Resources */ = {isa = PBXBuildFile; fileRef = A5AA53E81CC59F2700110B18 /* swipeToClean3.png */; };
+		A5AA53F51CC59F8D00110B18 /* TutorialLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5AA53F41CC59F8D00110B18 /* TutorialLayer.m */; };
+		A5AA54251CC7894000110B18 /* buttonSelect.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AA540F1CC7894000110B18 /* buttonSelect.wav */; };
+		A5AA54261CC7894000110B18 /* 146722__fins__menu-click.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AA54101CC7894000110B18 /* 146722__fins__menu-click.wav */; };
+		A5AA54271CC7894000110B18 /* jump.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AA54121CC7894000110B18 /* jump.wav */; };
+		A5AA54281CC7894000110B18 /* mainMenu1.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AA54141CC7894000110B18 /* mainMenu1.wav */; };
+		A5AA54291CC7894000110B18 /* mainMenu2.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AA54151CC7894000110B18 /* mainMenu2.wav */; };
+		A5AA542B1CC7894000110B18 /* pick.wav in Resources */ = {isa = PBXBuildFile; fileRef = A5AA54181CC7894000110B18 /* pick.wav */; };
+		A5AA542C1CC7894000110B18 /* scratch.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A5AA541A1CC7894000110B18 /* scratch.mp3 */; };
 		A5BF67421CBE672A00DB37C4 /* ButtonGreen_T.png in Resources */ = {isa = PBXBuildFile; fileRef = A5BF67411CBE672A00DB37C4 /* ButtonGreen_T.png */; };
 		A5BF67441CBE672E00DB37C4 /* ButtonBlue_T.png in Resources */ = {isa = PBXBuildFile; fileRef = A5BF67431CBE672E00DB37C4 /* ButtonBlue_T.png */; };
 		A5D6EE331CB4F9850081EF63 /* vic.png in Resources */ = {isa = PBXBuildFile; fileRef = A5D6EE321CB4F9850081EF63 /* vic.png */; };
@@ -502,6 +517,22 @@
 		A5A191B31C9D3D110056C979 /* Water_drop_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Water_drop_4.png; sourceTree = "<group>"; };
 		A5AA53C91CC450BD00110B18 /* Stone_T.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stone_T.png; sourceTree = "<group>"; };
 		A5AA53CA1CC450BD00110B18 /* Stone2_T.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Stone2_T.png; sourceTree = "<group>"; };
+		A5AA53E21CC59F2700110B18 /* collectGarbage1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collectGarbage1.png; sourceTree = "<group>"; };
+		A5AA53E31CC59F2700110B18 /* collectGarbage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = collectGarbage2.png; sourceTree = "<group>"; };
+		A5AA53E41CC59F2700110B18 /* jumpOverStone1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jumpOverStone1.png; sourceTree = "<group>"; };
+		A5AA53E51CC59F2700110B18 /* jumpOverStone2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jumpOverStone2.png; sourceTree = "<group>"; };
+		A5AA53E61CC59F2700110B18 /* swipeToClean1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipeToClean1.png; sourceTree = "<group>"; };
+		A5AA53E71CC59F2700110B18 /* swipeToClean2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipeToClean2.png; sourceTree = "<group>"; };
+		A5AA53E81CC59F2700110B18 /* swipeToClean3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = swipeToClean3.png; sourceTree = "<group>"; };
+		A5AA53F31CC59F8D00110B18 /* TutorialLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialLayer.h; sourceTree = "<group>"; };
+		A5AA53F41CC59F8D00110B18 /* TutorialLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialLayer.m; sourceTree = "<group>"; };
+		A5AA540F1CC7894000110B18 /* buttonSelect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buttonSelect.wav; sourceTree = "<group>"; };
+		A5AA54101CC7894000110B18 /* 146722__fins__menu-click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "146722__fins__menu-click.wav"; sourceTree = "<group>"; };
+		A5AA54121CC7894000110B18 /* jump.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jump.wav; sourceTree = "<group>"; };
+		A5AA54141CC7894000110B18 /* mainMenu1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mainMenu1.wav; sourceTree = "<group>"; };
+		A5AA54151CC7894000110B18 /* mainMenu2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mainMenu2.wav; sourceTree = "<group>"; };
+		A5AA54181CC7894000110B18 /* pick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pick.wav; sourceTree = "<group>"; };
+		A5AA541A1CC7894000110B18 /* scratch.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scratch.mp3; sourceTree = "<group>"; };
 		A5BF67411CBE672A00DB37C4 /* ButtonGreen_T.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonGreen_T.png; sourceTree = "<group>"; };
 		A5BF67431CBE672E00DB37C4 /* ButtonBlue_T.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonBlue_T.png; sourceTree = "<group>"; };
 		A5D6EE321CB4F9850081EF63 /* vic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vic.png; sourceTree = "<group>"; };
@@ -978,6 +1009,8 @@
 		A55E6ABA1C93DCE5006F0FE5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A5AA54021CC7894000110B18 /* Audio 2 */,
+				A5AA53E11CC59F2700110B18 /* tutorial */,
 				A51A8ECF1CC379B900E159EA /* MapTokens */,
 				A51A8EC21CBF061800E159EA /* Icons */,
 				A5BF673E1CBE672300DB37C4 /* Button */,
@@ -1103,6 +1136,83 @@
 			path = "Meng final VIC SURV";
 			sourceTree = "<group>";
 		};
+		A5AA53E11CC59F2700110B18 /* tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				A5AA53E21CC59F2700110B18 /* collectGarbage1.png */,
+				A5AA53E31CC59F2700110B18 /* collectGarbage2.png */,
+				A5AA53E41CC59F2700110B18 /* jumpOverStone1.png */,
+				A5AA53E51CC59F2700110B18 /* jumpOverStone2.png */,
+				A5AA53E61CC59F2700110B18 /* swipeToClean1.png */,
+				A5AA53E71CC59F2700110B18 /* swipeToClean2.png */,
+				A5AA53E81CC59F2700110B18 /* swipeToClean3.png */,
+			);
+			path = tutorial;
+			sourceTree = "<group>";
+		};
+		A5AA53F21CC59F5800110B18 /* TutorialLayer */ = {
+			isa = PBXGroup;
+			children = (
+				A5AA53F31CC59F8D00110B18 /* TutorialLayer.h */,
+				A5AA53F41CC59F8D00110B18 /* TutorialLayer.m */,
+			);
+			path = TutorialLayer;
+			sourceTree = "<group>";
+		};
+		A5AA54021CC7894000110B18 /* Audio 2 */ = {
+			isa = PBXGroup;
+			children = (
+				A5AA540E1CC7894000110B18 /* Button Select Sound */,
+				A5AA54111CC7894000110B18 /* Jump */,
+				A5AA54131CC7894000110B18 /* Main Menu Music */,
+				A5AA54171CC7894000110B18 /* Pick */,
+				A5AA54191CC7894000110B18 /* Scratch */,
+			);
+			path = "Audio 2";
+			sourceTree = "<group>";
+		};
+		A5AA540E1CC7894000110B18 /* Button Select Sound */ = {
+			isa = PBXGroup;
+			children = (
+				A5AA540F1CC7894000110B18 /* buttonSelect.wav */,
+				A5AA54101CC7894000110B18 /* 146722__fins__menu-click.wav */,
+			);
+			path = "Button Select Sound";
+			sourceTree = "<group>";
+		};
+		A5AA54111CC7894000110B18 /* Jump */ = {
+			isa = PBXGroup;
+			children = (
+				A5AA54121CC7894000110B18 /* jump.wav */,
+			);
+			path = Jump;
+			sourceTree = "<group>";
+		};
+		A5AA54131CC7894000110B18 /* Main Menu Music */ = {
+			isa = PBXGroup;
+			children = (
+				A5AA54141CC7894000110B18 /* mainMenu1.wav */,
+				A5AA54151CC7894000110B18 /* mainMenu2.wav */,
+			);
+			path = "Main Menu Music";
+			sourceTree = "<group>";
+		};
+		A5AA54171CC7894000110B18 /* Pick */ = {
+			isa = PBXGroup;
+			children = (
+				A5AA54181CC7894000110B18 /* pick.wav */,
+			);
+			path = Pick;
+			sourceTree = "<group>";
+		};
+		A5AA54191CC7894000110B18 /* Scratch */ = {
+			isa = PBXGroup;
+			children = (
+				A5AA541A1CC7894000110B18 /* scratch.mp3 */,
+			);
+			path = Scratch;
+			sourceTree = "<group>";
+		};
 		A5BF673E1CBE672300DB37C4 /* Button */ = {
 			isa = PBXGroup;
 			children = (
@@ -1183,6 +1293,7 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
+				A5AA53F21CC59F5800110B18 /* TutorialLayer */,
 				A5FCA82B1CB5E65300AB27F6 /* SounderManager */,
 				A5394AEE1CB1211200272141 /* Helper */,
 				A5394AAB1CAFA71C00272141 /* RealSourceManager */,
@@ -1482,6 +1593,7 @@
 				A5A191B41C9D3D110056C979 /* Background.png in Resources */,
 				A5394B7D1CB1D93100272141 /* Slide (2).png in Resources */,
 				A5A191B71C9D3D110056C979 /* cloud_3.png in Resources */,
+				A5AA54271CC7894000110B18 /* jump.wav in Resources */,
 				A5394B7B1CB1D93100272141 /* Slide (1).png in Resources */,
 				A55E6ACD1C93DCE5006F0FE5 /* Rectangle.png in Resources */,
 				A55E6ADB1C941F40006F0FE5 /* Dead_Fish.png in Resources */,
@@ -1492,6 +1604,8 @@
 				A5394B8A1CB1D93100272141 /* Walk (5).png in Resources */,
 				A5D6EE381CB515580081EF63 /* stone.png in Resources */,
 				A5394B4E1CB1D93100272141 /* Dead (10).png in Resources */,
+				A5AA54261CC7894000110B18 /* 146722__fins__menu-click.wav in Resources */,
+				A5AA53EA1CC59F2700110B18 /* collectGarbage2.png in Resources */,
 				A5394B651CB1D93100272141 /* Hurt (6).png in Resources */,
 				A5394B611CB1D93100272141 /* Hurt (2).png in Resources */,
 				A5BF67441CBE672E00DB37C4 /* ButtonBlue_T.png in Resources */,
@@ -1502,8 +1616,11 @@
 				A5394B801CB1D93100272141 /* Slide (5).png in Resources */,
 				A5394B511CB1D93100272141 /* Dead (4).png in Resources */,
 				A5394B561CB1D93100272141 /* Dead (9).png in Resources */,
+				A5AA53EF1CC59F2700110B18 /* swipeToClean3.png in Resources */,
+				A5AA54291CC7894000110B18 /* mainMenu2.wav in Resources */,
 				A5394B831CB1D93100272141 /* Slide (8).png in Resources */,
 				A5394B601CB1D93100272141 /* Hurt (10).png in Resources */,
+				A5AA53EB1CC59F2700110B18 /* jumpOverStone1.png in Resources */,
 				B737893B180761570076A88C /* Published-iOS in Resources */,
 				A5A191BD1C9D3D110056C979 /* Water_drop_2.png in Resources */,
 				A5394B771CB1D93100272141 /* Jump (5).png in Resources */,
@@ -1519,6 +1636,7 @@
 				A5394B741CB1D93100272141 /* Jump (2).png in Resources */,
 				A5394B621CB1D93100272141 /* Hurt (3).png in Resources */,
 				A5A191B51C9D3D110056C979 /* cloud_1.png in Resources */,
+				A5AA53ED1CC59F2700110B18 /* swipeToClean1.png in Resources */,
 				A5A191BC1C9D3D110056C979 /* Water_drop_1.png in Resources */,
 				A5D6EE351CB4F98B0081EF63 /* run.png in Resources */,
 				A5394B781CB1D93100272141 /* Jump (6).png in Resources */,
@@ -1529,6 +1647,7 @@
 				A5D6EE3A1CB5155D0081EF63 /* stone2.png in Resources */,
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				A5BF67421CBE672A00DB37C4 /* ButtonGreen_T.png in Resources */,
+				A5AA53EE1CC59F2700110B18 /* swipeToClean2.png in Resources */,
 				A5394B581CB1D93100272141 /* Fall (2).png in Resources */,
 				A5394AF51CB1356A00272141 /* empty-green-button.png in Resources */,
 				A5394AF91CB1D86400272141 /* BroadBeach_BG.png in Resources */,
@@ -1543,8 +1662,10 @@
 				A5394ACD1CAFB77900272141 /* bottle3.png in Resources */,
 				A5394B481CB1D93100272141 /* cat_run(4).png in Resources */,
 				A5394B6A1CB1D93100272141 /* Idle (10).png in Resources */,
+				A5AA542C1CC7894000110B18 /* scratch.mp3 in Resources */,
 				A5394AD01CAFB77900272141 /* bottle6.png in Resources */,
 				A5394B6B1CB1D93100272141 /* Idle (2).png in Resources */,
+				A5AA53EC1CC59F2700110B18 /* jumpOverStone2.png in Resources */,
 				A5394B641CB1D93100272141 /* Hurt (5).png in Resources */,
 				A50CE3741CC3CA750011548F /* cleanRate75.png in Resources */,
 				A50CE3731CC3CA750011548F /* cleanRate50Border.png in Resources */,
@@ -1557,6 +1678,7 @@
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
 				A5394B491CB1D93100272141 /* cat_run(5).png in Resources */,
 				A50CE36F1CC3CA750011548F /* cleanRate100Border.png in Resources */,
+				A5AA54281CC7894000110B18 /* mainMenu1.wav in Resources */,
 				A5394B7C1CB1D93100272141 /* Slide (10).png in Resources */,
 				A5394B7E1CB1D93100272141 /* Slide (3).png in Resources */,
 				A51A8EC81CBF064500E159EA /* replay.png in Resources */,
@@ -1564,6 +1686,7 @@
 				A5394B4F1CB1D93100272141 /* Dead (2).png in Resources */,
 				A5394B501CB1D93100272141 /* Dead (3).png in Resources */,
 				A5394B7F1CB1D93100272141 /* Slide (4).png in Resources */,
+				A5AA53E91CC59F2700110B18 /* collectGarbage1.png in Resources */,
 				A5394ACE1CAFB77900272141 /* bottle4.png in Resources */,
 				A5394B891CB1D93100272141 /* Walk (4).png in Resources */,
 				A5394B681CB1D93100272141 /* Hurt (9).png in Resources */,
@@ -1577,6 +1700,7 @@
 				A5FCA8201CB5DCA300AB27F6 /* Sector-Off-Limits_Looping.mp3 in Resources */,
 				A55E6AC81C93DCE5006F0FE5 /* board bg.png in Resources */,
 				A5394B4C1CB1D93100272141 /* cat_run(8).png in Resources */,
+				A5AA54251CC7894000110B18 /* buttonSelect.wav in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
 				A55E6ACC1C93DCE5006F0FE5 /* Pentagon.png in Resources */,
 				A57AA7901C9FCA4500F6540A /* green-forest-and-hills-background_PNG.png in Resources */,
@@ -1609,6 +1733,7 @@
 				A5394B521CB1D93100272141 /* Dead (5).png in Resources */,
 				A5394B931CB207ED00272141 /* environment video.mp4 in Resources */,
 				A5A191BE1C9D3D110056C979 /* Water_drop_3.png in Resources */,
+				A5AA542B1CC7894000110B18 /* pick.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1695,6 +1820,7 @@
 				A55E6B1D1C9674F9006F0FE5 /* SubStageLayer.m in Sources */,
 				A55E6AD51C941411006F0FE5 /* PollutionEventStandard.m in Sources */,
 				A55E69851C93DA53006F0FE5 /* RunningCharacter.m in Sources */,
+				A5AA53F51CC59F8D00110B18 /* TutorialLayer.m in Sources */,
 				A55E6AD81C941509006F0FE5 /* StandardGameObject.m in Sources */,
 				A55E695B1C90FB0D006F0FE5 /* GameMainScene.m in Sources */,
 				A57AA78E1C9F693500F6540A /* UILayer.m in Sources */,
@@ -1930,6 +2056,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Meng Lin Tsai (D4JS4UGUVN)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1963,6 +2090,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Meng Lin Tsai (D4JS4UGUVN)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1989,7 +2117,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Meng Lin Tsai (D4JS4UGUVN)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2025,7 +2153,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Meng Lin Tsai (D4JS4UGUVN)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

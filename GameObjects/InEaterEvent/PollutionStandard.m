@@ -7,6 +7,7 @@
 //
 
 #import "PollutionStandard.h"
+#import "SoundManager.h"
 
 @implementation PollutionStandard
 {
@@ -31,7 +32,7 @@
 -(void)die
 {
     _alive = NO;
-    
+    [[SoundManager shared]scratchEffect];
     [self dieAnimation];
 }
 -(void)dieAnimation

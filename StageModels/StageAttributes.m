@@ -36,7 +36,7 @@
 }
 -(void)buildButton
 {
-    CCButton* goButton = [CCButton buttonWithTitle:@"Challenge"];
+    CCButton* goButton = [CCButton buttonWithTitle:@"GO!"];
     [self addChild:goButton];
     goButton.position = ccp(self.contentSize.width/3, self.contentSize.height*0.2);
     [goButton setTarget:self selector:@selector(goButtonPressed)];

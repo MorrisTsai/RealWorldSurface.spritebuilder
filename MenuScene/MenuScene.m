@@ -85,7 +85,7 @@
     }];
     
    // [self performSelector:@selector(runVideo) withObject:nil afterDelay:5];
-    [[SoundManager shared]playBackgroundMusic];
+    [[SoundManager shared]playMenuMusic];
     
 }
 
