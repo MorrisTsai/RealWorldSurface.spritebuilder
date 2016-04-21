@@ -7,7 +7,11 @@
 //
 
 #import "CCNode.h"
-
+#import "StageModels.h"
+@protocol TutorialLayerDelegate
+-(void) tutorialEnd;
+@end
 @interface TutorialLayer : CCNode
-
+- (instancetype)initWithMode:(StageType)type;
+@property (nonatomic,weak) id<TutorialLayerDelegate>delegate;
 @end

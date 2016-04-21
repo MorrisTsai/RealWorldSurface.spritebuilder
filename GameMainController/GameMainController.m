@@ -39,6 +39,15 @@ static GameMainController* sharedController;
 {
     mainScene = gameMainScene;
 }
+-(void)gamePause
+{
+    [self unschedule:@selector(worldNextFrame)];
+}
+-(void)gameResume
+{
+    [self schedule:@selector(worldNextFrame) interval:0.01];
+
+}
 -(void)gameStart
 {
     gameCounter = 0;

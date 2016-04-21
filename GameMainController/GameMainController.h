@@ -19,6 +19,8 @@
 -(void)unregisterObject:(StandardGameObject*)object;
 -(void)removeGarbage;
 -(void)worldNextFrame;
+-(void)gamePause;
+-(void)gameResume;
 
 
 
