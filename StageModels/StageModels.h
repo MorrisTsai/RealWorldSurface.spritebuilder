@@ -30,5 +30,11 @@ typedef enum StageType
 @property (nonatomic,readonly) NSString* stageTypeString;
 @property (nonatomic) int waterPercentage;
 @property (nonatomic) int garbagePercentage;
+@property (nonatomic) int savedFish;
+@property (nonatomic) int collectedGarbage;
+@property int prevSavedFish;
+@property int prevCollectedGarbage;
+@property int prevCleanPercentage;
 -(int)randNumberOfPOllutionNumbers;
+-(double)cleanPercentage;
 @end

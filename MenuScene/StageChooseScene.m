@@ -114,7 +114,7 @@
     shader.position = ccp(self.contentSize.width*0.05, self.contentSize.height*0.1);
 
     scrollContent.contentSize = CGSizeMake(contentNode.contentSize.width, ([[RealSourceManager shared].dailyStages count]+2) * (height + space));
-     CCSprite* image = [CCSprite spriteWithImageNamed:@"ButtonBlue_T.png"];
+    /// CCSprite* image = [CCSprite spriteWithImageNamed:@"ButtonBlue_T.png"];
     for(int i = 0 ; i < [[RealSourceManager shared].dailyStages count]; i++)
     {
 
@@ -123,23 +123,9 @@
         [background addChild:thisCell];
         thisCell.position = ccp(thisModel.locationX, background.contentSize.height - thisModel.locationY);
         thisCell.delegate = self;
-//       
-//        CCButton* button = [CCButton buttonWithTitle:@"" spriteFrame:image.spriteFrame];
-//        //button.preferredSize = CGSizeMake(winSize.width*0.8, height);
-//        button.scaleX = winSize.width*0.75/button.contentSize.width;
-//        button.scaleY = height/button.contentSize.height;
-//        CCLabelTTF* nameLabel = [CCLabelTTF labelWithString:thisModel.stageName fontName:@"AmericanTypewriter-CondensedBold" fontSize:14];
-//        nameLabel.fontColor = [CCColor greenColor];
-//      
-//     //   button.position = ccp(self.contentSize.width/2, self.contentSize.height/2 + 20*i);
-//        button.name = [NSString stringWithFormat:@"%d",i];
-//     
-//        [button setTarget:self selector:@selector(stageChosed:)];
-//        
-//        button.position = ccp(shader.contentSize.width/2 , scrollContent.contentSize.height - (i + 1) * (height + space));
-//        nameLabel.position = button.position;
-//        [scrollContent addChild:button];
-//        [scrollContent addChild:nameLabel];
+        
+       
+
       
     }
     

@@ -33,7 +33,7 @@
         border.scale = background.scale*1.1;
         
       
-        
+      
         
     }
     return self;
@@ -44,6 +44,22 @@
     [self buildView];
     [self borderChangeColor];
     [self scaleSeq];
+    
+}
+-(void)onEnterTransitionDidFinish
+{
+    [super onEnterTransitionDidFinish];
+    [self scheduleBlock:^(CCTimer* timer){
+        [self checkShow];
+    }delay:0.5];
+}
+-(void)checkShow
+{
+    if(self.myModel.prevCollectedGarbage != self.myModel.collectedGarbage ||
+       self.myModel.prevSavedFish != self.myModel.savedFish)
+    {
+        [self.delegate stageCellClicked:self];
+    }
 }
 -(void)scaleSeq
 {

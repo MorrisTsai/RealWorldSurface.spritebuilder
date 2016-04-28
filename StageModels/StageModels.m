@@ -42,10 +42,47 @@
         self.isGarbageEnable = [[attribute objectForKey:@"garbage_active"]intValue];
         self.isWaterEnable = [[attribute objectForKey:@"water_active"]intValue];
         
+        
+        self.savedFish = [[attribute objectForKey:@"fish"]intValue];
+        self.collectedGarbage = [[attribute objectForKey:@"garbage"]intValue];
+        
         self.stageName = [attribute objectForKey:SubRegionName];
         self.type = self.isGarbageEnable*2 + self.isWaterEnable;
+        self.prevSavedFish = self.savedFish;
+        self.prevCollectedGarbage = self.collectedGarbage;
+        self.prevCleanPercentage = [self cleanPercentage];
+        
+        
     }
     return self;
+}
+-(double)cleanPercentage
+{
+    return  (self.garbagePercentage+self.waterPercentage)*1.0/2;
+}
+-(int)savedFish
+{
+    NSString* key = [NSString stringWithFormat:@"%@SavedFish",self.stageName];
+    int value = [[[NSUserDefaults standardUserDefaults]objectForKey:key]intValue];
+    return value;
+}
+-(int)collectedGarbage
+{
+    NSString* key = [NSString stringWithFormat:@"%@CollectedGarbage",self.stageName];
+    int value = [[[NSUserDefaults standardUserDefaults]objectForKey:key]intValue];
+    return value;
+}
+-(void)setCollectedGarbage:(int)collectedGarbage
+{
+    NSString* key = [NSString stringWithFormat:@"%@CollectedGarbage",self.stageName];
+    [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%d",collectedGarbage] forKey:key];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+}
+-(void)setSavedFish:(int)savedFish
+{
+    NSString* key = [NSString stringWithFormat:@"%@SavedFish",self.stageName];
+    [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%d",savedFish] forKey:key];
+    [[NSUserDefaults standardUserDefaults]synchronize];
 }
 -(int)waterPercentage
 {
