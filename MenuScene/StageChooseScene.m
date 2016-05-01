@@ -16,6 +16,7 @@
 #import "StageCell.h"
 #import "StageAttributes.h"
 #import "SoundManager.h"
+#import "MenuScene.h"
 #define MARGIN 7
 #define TOP_MARGIN 14
 
@@ -125,10 +126,9 @@
 }
 -(void)backButtonPressed
 {
-    [shader removeFromParentAndCleanup:YES];
+     //  [self buildRegion];
+     [[CCDirector sharedDirector]replaceScene:[MenuScene node] withTransition:[CCTransition transitionFadeWithDuration:1]];
     [backButton removeFromParentAndCleanup:YES];
-    [self showLoading];
-  //  [self buildRegion];
 }
 -(void)buildStageList
 {

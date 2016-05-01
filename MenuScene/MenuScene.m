@@ -13,6 +13,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AVKit/AVKit.h>
 #import "SoundManager.h"
+#import "CreditPanel.h"
 @interface MenuScene ()<AVPlayerViewControllerDelegate>
 @end
 
@@ -26,6 +27,7 @@
     CCButton* leaderboardButton;
     NSMutableArray* groundArray;
     CCNodeColor* whiteNode;
+    CreditPanel* thisPanel;
     
    
 }
@@ -35,7 +37,7 @@
     if (self) {
         winSize = [CCDirector sharedDirector].viewSize;
         groundArray=[NSMutableArray array];
-       
+        [self setUserInteractionEnabled:YES];
     }
     return self;
 }
@@ -73,7 +75,7 @@
     [super onEnter];
     [self buildBackground];
     [self startView];
-    
+    [self buildCreditButton];
     [self buildGround];
     [self schedule:@selector(groundMove) interval:0.01];
   
@@ -108,6 +110,19 @@
     CCActionSequence* seq = [CCActionSequence actions:cf1,delay1,cf2,delay2,cf3,delay3,cf4, nil];
     [self runAction:seq];
 }
+-(void)creditShow
+{
+    if(!thisPanel.parent)
+    {
+        thisPanel = [[CreditPanel alloc]initWithSize:CGSizeMake(300, 200)];
+        [self addChild:thisPanel];
+        thisPanel.position = ccp(self.contentSize.width/2, self.contentSize.height/2);
+    }
+}
+-(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
+{
+    [thisPanel removeFromParentAndCleanup:YES];
+}
 -(void)noInternet
 {
     
@@ -140,6 +155,13 @@
     
     
 
+}
+-(void)buildCreditButton
+{
+    CCButton* creditButton = [CCButton buttonWithTitle:@"About" fontName:nil fontSize:15];
+    [self addChild:creditButton z:100];
+    creditButton.position = ccp(self.contentSize.width - creditButton.contentSize.width*2, creditButton.contentSize.height*2);
+    [creditButton setTarget:self selector:@selector(creditShow)];
 }
 -(void)buildButtons
 {//

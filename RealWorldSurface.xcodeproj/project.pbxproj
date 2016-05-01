@@ -80,6 +80,8 @@
 		A51A8ED41CC3BE2400E159EA /* StageAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A51A8ED31CC3BE2400E159EA /* StageAttributes.m */; };
 		A536456E1CD59DF7006E1007 /* CrossRed.png in Resources */ = {isa = PBXBuildFile; fileRef = A536456D1CD59DF7006E1007 /* CrossRed.png */; };
 		A53645721CD59DFC006E1007 /* TickGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = A53645711CD59DFC006E1007 /* TickGreen.png */; };
+		A53645761CD5DB3A006E1007 /* CreditPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = A53645751CD5DB3A006E1007 /* CreditPanel.m */; };
+		A53645781CD5DC0D006E1007 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A53645771CD5DC0D006E1007 /* Logo.png */; };
 		A5394AB01CAFA72D00272141 /* RealSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A5394AAF1CAFA72D00272141 /* RealSourceManager.m */; };
 		A5394AC21CAFB4B700272141 /* GarbageObstacle.m in Sources */ = {isa = PBXBuildFile; fileRef = A5394AC11CAFB4B700272141 /* GarbageObstacle.m */; };
 		A5394ACB1CAFB77900272141 /* bottle1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5394AC41CAFB77900272141 /* bottle1.png */; };
@@ -378,6 +380,9 @@
 		A51A8ED31CC3BE2400E159EA /* StageAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageAttributes.m; sourceTree = "<group>"; };
 		A536456D1CD59DF7006E1007 /* CrossRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CrossRed.png; sourceTree = "<group>"; };
 		A53645711CD59DFC006E1007 /* TickGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TickGreen.png; sourceTree = "<group>"; };
+		A53645741CD5DB3A006E1007 /* CreditPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditPanel.h; sourceTree = "<group>"; };
+		A53645751CD5DB3A006E1007 /* CreditPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditPanel.m; sourceTree = "<group>"; };
+		A53645771CD5DC0D006E1007 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
 		A5394AAE1CAFA72D00272141 /* RealSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealSourceManager.h; sourceTree = "<group>"; };
 		A5394AAF1CAFA72D00272141 /* RealSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealSourceManager.m; sourceTree = "<group>"; };
 		A5394AC01CAFB4B700272141 /* GarbageObstacle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GarbageObstacle.h; sourceTree = "<group>"; };
@@ -867,6 +872,16 @@
 			path = MapTokens;
 			sourceTree = "<group>";
 		};
+		A53645731CD5DAD7006E1007 /* CreditPanel */ = {
+			isa = PBXGroup;
+			children = (
+				A53645741CD5DB3A006E1007 /* CreditPanel.h */,
+				A53645751CD5DB3A006E1007 /* CreditPanel.m */,
+			);
+			name = CreditPanel;
+			path = CreditPage;
+			sourceTree = "<group>";
+		};
 		A5394AAB1CAFA71C00272141 /* RealSourceManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1031,6 +1046,7 @@
 		A55E6ABA1C93DCE5006F0FE5 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A53645771CD5DC0D006E1007 /* Logo.png */,
 				A5B9B01F1CC85D0100484224 /* Arrows */,
 				A5AA54021CC7894000110B18 /* Audio 2 */,
 				A5AA53E11CC59F2700110B18 /* tutorial */,
@@ -1331,6 +1347,7 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
+				A53645731CD5DAD7006E1007 /* CreditPanel */,
 				A5AA53F21CC59F5800110B18 /* TutorialLayer */,
 				A5FCA82B1CB5E65300AB27F6 /* SounderManager */,
 				A5394AEE1CB1211200272141 /* Helper */,
@@ -1675,6 +1692,7 @@
 				A5FCA81D1CB5DCA300AB27F6 /* Funky-Gameplay_Looping.mp3 in Resources */,
 				A5394ACF1CAFB77900272141 /* bottle5.png in Resources */,
 				A5394B741CB1D93100272141 /* Jump (2).png in Resources */,
+				A53645781CD5DC0D006E1007 /* Logo.png in Resources */,
 				A5394B621CB1D93100272141 /* Hurt (3).png in Resources */,
 				A5A191B51C9D3D110056C979 /* cloud_1.png in Resources */,
 				A5AA53ED1CC59F2700110B18 /* swipeToClean1.png in Resources */,
@@ -1873,6 +1891,7 @@
 				A55E695B1C90FB0D006F0FE5 /* GameMainScene.m in Sources */,
 				A57AA78E1C9F693500F6540A /* UILayer.m in Sources */,
 				A55E6B121C96644D006F0FE5 /* StageModels.m in Sources */,
+				A53645761CD5DB3A006E1007 /* CreditPanel.m in Sources */,
 				A55E6AD21C9413CD006F0FE5 /* PollutionStandard.m in Sources */,
 				A5394AB01CAFA72D00272141 /* RealSourceManager.m in Sources */,
 				A5394AF31CB1211F00272141 /* ScrollViewBoundaryShader.m in Sources */,
