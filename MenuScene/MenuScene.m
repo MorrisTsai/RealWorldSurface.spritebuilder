@@ -79,8 +79,15 @@
   
     [[RealSourceManager shared]listDailyStageFromServerWithCompletionHandler:^(BOOL ok)
     {
-    
-         [self buildButtons];
+        if(ok)
+        {
+            [self buildButtons];
+        }
+        else
+        {
+            [self noInternet];
+        }
+        
         
     }];
     
@@ -100,6 +107,39 @@
     CCActionDelay* delay3 = [CCActionDelay actionWithDuration:0.3];
     CCActionSequence* seq = [CCActionSequence actions:cf1,delay1,cf2,delay2,cf3,delay3,cf4, nil];
     [self runAction:seq];
+}
+-(void)noInternet
+{
+    
+    CCSprite* gg = [CCSprite spriteWithImageNamed:@"empty-green-button.png"];
+    dispatch_async(dispatch_get_main_queue(), ^(){
+        gameButton = [CCButton buttonWithTitle:@"No Internet" fontName:@"AmericanTypewriter-CondensedBold" fontSize:30];
+        // gameButton = [CCButton buttonWithTitle:@"Start" spriteFrame:gg.spriteFrame];
+        //  gameButton.label.fontSize = 14;
+        //gameButton.background.spriteFrame = gg.spriteFrame;
+        [self addChild:gameButton z:2];
+        gameButton.position = ccp(winSize.width*0.8, winSize.height*0.8);
+      //  [gameButton setTarget:self selector:@selector(gameButtonPressed)];
+        
+        //            CCNodeColor* backgroundNode = [CCNodeColor nodeWithColor:[CCColor greenColor]];
+        //            backgroundNode.contentSize = gameButton.contentSize;
+        //            [self addChild:backgroundNode z:1];
+        //            backgroundNode.position = gameButton.position;
+        //            backgroundNode.anchorPoint = ccp(0.5, 0.5);
+        
+        CCSprite* buttonBackground = [CCSprite spriteWithImageNamed:@"ButtonBlue_T.png"];
+        buttonBackground.scaleX = gameButton.contentSize.width/buttonBackground.contentSize.width;
+        buttonBackground.scaleY = gameButton.contentSize.height/buttonBackground.contentSize.height;
+        [self addChild:buttonBackground];
+        buttonBackground.position = gameButton.position;
+        
+        gameButton.enabled = NO;
+        
+        
+    });
+    
+    
+
 }
 -(void)buildButtons
 {//

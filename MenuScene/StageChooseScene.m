@@ -53,7 +53,43 @@
     [super onEnter];
     [self checkData];
     [self buildStageList];
+    [self buildAllTree];
     [[SoundManager shared]playMapMusic];
+}
+-(void)buildAllTree
+{
+    NSArray* allClean = [[RealSourceManager shared]getAll100PercentCleanLocation];
+    
+    for(NSDictionary* thisDic in allClean)
+    {
+        BOOL flag = NO;
+        NSString* key = [thisDic.allKeys firstObject];
+        for(int i = 0 ; i < [[RealSourceManager shared].dailyStages count]; i++)
+        {
+            
+            StageModels* thisModel = [[RealSourceManager shared].dailyStages objectAtIndex:i];
+            if([thisModel.stageName isEqualToString:key])
+            {
+                flag = YES;
+            }
+          
+        }
+        if(flag)
+        {
+            continue;
+        }
+       
+        CGPoint position = CGPointFromString([thisDic.allValues firstObject]);
+        
+        CCSprite* thisTree = [CCSprite spriteWithImageNamed:[NSString stringWithFormat:@"cleanRate%d.png",100]];
+        [background addChild:thisTree];
+       // self.anchorPoint = ccp(0.5, 0.5);
+        thisTree.position = ccp(position.x, background.contentSize.height - position.y);
+       
+        thisTree.scale = 40/thisTree.contentSize.width;
+        
+    }
+    
 }
 -(void)checkData
 {

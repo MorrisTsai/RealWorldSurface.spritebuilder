@@ -52,6 +52,21 @@
     [super onEnter];
     [self buildTutorialView];
     [self buildArrow];
+    [self buildSkip];
+}
+-(void)buildSkip
+{
+    CCButton* skipButton = [CCButton buttonWithTitle:@"Skip" fontName:nil fontSize:15];
+    [self addChild:skipButton];
+    skipButton.position = ccp(self.contentSize.width - skipButton.contentSize.width*2, skipButton.contentSize.height*2);
+    skipButton.cascadeColorEnabled = YES;
+    skipButton.color = [CCColor redColor];
+    [skipButton setTarget:self selector:@selector(skipButtonPressed)];
+}
+-(void)skipButtonPressed
+{
+    [self.delegate tutorialEnd];
+    [self removeFromParentAndCleanup:YES];
 }
 -(void)buildTutorialView
 {

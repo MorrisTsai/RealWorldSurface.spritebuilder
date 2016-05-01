@@ -8,6 +8,7 @@
 
 #import "StageModels.h"
 #import "VSConstant.h"
+#import "RealSourceManager.h"
 @implementation StageModels
 {
     int min;
@@ -55,6 +56,13 @@
         
     }
     return self;
+}
+-(void)checkClean
+{
+    if([self cleanPercentage] >= 100)
+    {
+        [[RealSourceManager shared]addNewAllCleanLocation:self.stageName andPosition:ccp(self.locationX, self.locationY)];
+    }
 }
 -(double)cleanPercentage
 {
@@ -115,7 +123,7 @@
     }
     [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%d",_waterPercentage] forKey:key];
     [[NSUserDefaults standardUserDefaults]synchronize];
-    
+    [self checkClean];
 }
 -(void)setGarbagePercentage:(int)garbagePercentage
 {
@@ -127,6 +135,7 @@
     }
     [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%d",_garbagePercentage] forKey:key];
     [[NSUserDefaults standardUserDefaults]synchronize];
+    [self checkClean];
 }
 
 -(NSString *)stageTypeString

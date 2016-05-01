@@ -57,6 +57,7 @@
         if(CGRectIntersectsRect(rect, thisPollution.boundingBox))
         {
             [creature die];
+            return YES;
         }
     }
 }

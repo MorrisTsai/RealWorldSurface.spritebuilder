@@ -16,6 +16,8 @@
 
 #pragma mark Client Method
 -(NSArray*)getSubRegionArrayByAreaId:(NSString*)areaId;
+-(NSMutableArray *)getAll100PercentCleanLocation;
+-(void)addNewAllCleanLocation:(NSString*)name andPosition:(CGPoint)position;
 
 
 #pragma mark Server Method;

@@ -44,8 +44,9 @@
     [self buildView];
     [self borderChangeColor];
     [self scaleSeq];
-    
+
 }
+
 -(void)onEnterTransitionDidFinish
 {
     [super onEnterTransitionDidFinish];
