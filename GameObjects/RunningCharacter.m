@@ -7,6 +7,7 @@
 //
 
 #import "RunningCharacter.h"
+#import "SoundManager.h"
 
 @implementation RunningCharacter
 {
@@ -116,11 +117,13 @@
         isJumping = YES;
         aniSprite.visible = NO;
         CCActionJumpBy* jb = [CCActionJumpBy actionWithDuration:0.5 position:ccp(0, 0) height:100 jumps:1];
+        jb.duration *= 1.8;
         [self runAction:jb];
+        [[SoundManager shared]jumpEffect];
         [self scheduleBlock:^(CCTimer* timer){
             isJumping = NO;
             aniSprite.visible = YES;
-        }delay:0.5];
+        }delay:0.5*1.8];
     }
 }
 -(void)initCharacterData;

@@ -42,14 +42,14 @@
 }
 -(void)buildButton
 {
-    CCSprite* buttonSprite = [CCSprite spriteWithImageNamed:@"TickGreen.png"];
+    CCSprite* buttonSprite = [CCSprite spriteWithImageNamed:@"TickGreen_border.png"];
     CCButton* goButton = [CCButton buttonWithTitle:@"" spriteFrame:buttonSprite.spriteFrame];
     goButton.scale /= 10;
     [self addChild:goButton];
     goButton.position = ccp(self.contentSize.width/3, self.contentSize.height*0.2);
     [goButton setTarget:self selector:@selector(goButtonPressed)];
     
-    CCSprite* buttonSprite2 = [CCSprite spriteWithImageNamed:@"CrossRed.png"];
+    CCSprite* buttonSprite2 = [CCSprite spriteWithImageNamed:@"CrossRed_border.png"];
     CCButton* cancelButton = [CCButton buttonWithTitle:@"" spriteFrame:buttonSprite2.spriteFrame];
     cancelButton.scale /= 10;
     [self addChild:cancelButton];

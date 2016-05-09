@@ -172,6 +172,7 @@
 -(int)pollutionConstant
 {
     int returnValue = ((23 - sqrt(min+ max))/2)*1.0 / ((101 - self.waterPercentage)*0.01);
+    returnValue = returnValue > 20 ? returnValue : 20;
     return  (self.isGarbageEnable ? returnValue : returnValue / 2);
 }
 -(int)randNumberOfPOllutionNumbers

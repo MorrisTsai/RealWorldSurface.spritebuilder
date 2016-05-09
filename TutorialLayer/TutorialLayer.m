@@ -100,8 +100,12 @@
 {
     [touchArray addObject:[NSValue valueWithCGPoint:[self convertToWorldSpace:touch.locationInWorld]]];
     [self checkChangePage];
-   
+   if([touchArray count] <= 2)
+   {
+       [self nextPage];
+   }
 }
+
 -(void)checkChangePage
 {
     CGPoint firstPoint = [[touchArray firstObject]CGPointValue];
@@ -172,8 +176,8 @@
 {
     if(!leftArrow)
     {
-        leftArrow = [CCSprite spriteWithImageNamed:@"arrowleft.png"];
-        rightArrow = [CCSprite spriteWithImageNamed:@"arrowright.png"];
+        rightArrow = [CCSprite spriteWithImageNamed:@"arrowleft.png"];
+        leftArrow = [CCSprite spriteWithImageNamed:@"arrowright.png"];
         
         
     }

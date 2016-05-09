@@ -45,13 +45,13 @@ static GameMainController* sharedController;
 }
 -(void)gameResume
 {
-    [self schedule:@selector(worldNextFrame) interval:0.01];
+    [self schedule:@selector(worldNextFrame) interval:0.015];
 
 }
 -(void)gameStart
 {
     gameCounter = 0;
-    [self schedule:@selector(worldNextFrame) interval:0.01];
+    [self schedule:@selector(worldNextFrame) interval:0.015];
 }
 -(void)gameEnd
 {

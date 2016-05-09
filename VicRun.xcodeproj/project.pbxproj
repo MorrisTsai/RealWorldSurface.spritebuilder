@@ -50,8 +50,6 @@
 		A51A8ECC1CBF0F8500E159EA /* pickingChildren.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A51A8ECB1CBF0F8500E159EA /* pickingChildren.mp4 */; };
 		A51A8ECE1CC24D9500E159EA /* stasticmap.png in Resources */ = {isa = PBXBuildFile; fileRef = A51A8ECD1CC24D9500E159EA /* stasticmap.png */; };
 		A51A8ED41CC3BE2400E159EA /* StageAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = A51A8ED31CC3BE2400E159EA /* StageAttributes.m */; };
-		A536456E1CD59DF7006E1007 /* CrossRed.png in Resources */ = {isa = PBXBuildFile; fileRef = A536456D1CD59DF7006E1007 /* CrossRed.png */; };
-		A53645721CD59DFC006E1007 /* TickGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = A53645711CD59DFC006E1007 /* TickGreen.png */; };
 		A53645761CD5DB3A006E1007 /* CreditPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = A53645751CD5DB3A006E1007 /* CreditPanel.m */; };
 		A53645781CD5DC0D006E1007 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = A53645771CD5DC0D006E1007 /* Logo.png */; };
 		A536458A1CD6C12A006E1007 /* water pollution mp4 format.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = A53645891CD6C12A006E1007 /* water pollution mp4 format.mp4 */; };
@@ -188,6 +186,9 @@
 		A57AA78E1C9F693500F6540A /* UILayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A57AA78D1C9F693500F6540A /* UILayer.m */; };
 		A57AA7901C9FCA4500F6540A /* green-forest-and-hills-background_PNG.png in Resources */ = {isa = PBXBuildFile; fileRef = A57AA78F1C9FCA4500F6540A /* green-forest-and-hills-background_PNG.png */; };
 		A57AA7931C9FCB5300F6540A /* StageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A57AA7921C9FCB5300F6540A /* StageCell.m */; };
+		A58222F01CDB6232000A714A /* CrossRed_border.png in Resources */ = {isa = PBXBuildFile; fileRef = A58222EF1CDB6232000A714A /* CrossRed_border.png */; };
+		A58222F21CDB6239000A714A /* TickGreen_border.png in Resources */ = {isa = PBXBuildFile; fileRef = A58222F11CDB6239000A714A /* TickGreen_border.png */; };
+		A58222F61CE00E87000A714A /* TimeBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A58222F51CE00E87000A714A /* TimeBar.m */; };
 		A5A191901C9A345C0056C979 /* bama.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A1918F1C9A345C0056C979 /* bama.png */; };
 		A5A191B41C9D3D110056C979 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191A81C9D3D110056C979 /* Background.png */; };
 		A5A191B51C9D3D110056C979 /* cloud_1.png in Resources */ = {isa = PBXBuildFile; fileRef = A5A191A91C9D3D110056C979 /* cloud_1.png */; };
@@ -352,8 +353,6 @@
 		A51A8ECD1CC24D9500E159EA /* stasticmap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stasticmap.png; sourceTree = "<group>"; };
 		A51A8ED21CC3BE2400E159EA /* StageAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageAttributes.h; sourceTree = "<group>"; };
 		A51A8ED31CC3BE2400E159EA /* StageAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageAttributes.m; sourceTree = "<group>"; };
-		A536456D1CD59DF7006E1007 /* CrossRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CrossRed.png; sourceTree = "<group>"; };
-		A53645711CD59DFC006E1007 /* TickGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TickGreen.png; sourceTree = "<group>"; };
 		A53645741CD5DB3A006E1007 /* CreditPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreditPanel.h; sourceTree = "<group>"; };
 		A53645751CD5DB3A006E1007 /* CreditPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreditPanel.m; sourceTree = "<group>"; };
 		A53645771CD5DC0D006E1007 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
@@ -511,6 +510,10 @@
 		A57AA78F1C9FCA4500F6540A /* green-forest-and-hills-background_PNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-forest-and-hills-background_PNG.png"; sourceTree = "<group>"; };
 		A57AA7911C9FCB5300F6540A /* StageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StageCell.h; sourceTree = "<group>"; };
 		A57AA7921C9FCB5300F6540A /* StageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StageCell.m; sourceTree = "<group>"; };
+		A58222EF1CDB6232000A714A /* CrossRed_border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CrossRed_border.png; sourceTree = "<group>"; };
+		A58222F11CDB6239000A714A /* TickGreen_border.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TickGreen_border.png; sourceTree = "<group>"; };
+		A58222F41CE00E87000A714A /* TimeBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeBar.h; sourceTree = "<group>"; };
+		A58222F51CE00E87000A714A /* TimeBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeBar.m; sourceTree = "<group>"; };
 		A5A1918F1C9A345C0056C979 /* bama.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bama.png; sourceTree = "<group>"; };
 		A5A191A81C9D3D110056C979 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Background.png; sourceTree = "<group>"; };
 		A5A191A91C9D3D110056C979 /* cloud_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud_1.png; sourceTree = "<group>"; };
@@ -832,9 +835,9 @@
 		A51A8EC21CBF061800E159EA /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				A536456D1CD59DF7006E1007 /* CrossRed.png */,
-				A53645711CD59DFC006E1007 /* TickGreen.png */,
 				A51A8EC51CBF063E00E159EA /* tv.png */,
+				A58222F11CDB6239000A714A /* TickGreen_border.png */,
+				A58222EF1CDB6232000A714A /* CrossRed_border.png */,
 				A51A8EC71CBF064500E159EA /* replay.png */,
 			);
 			path = Icons;
@@ -1133,6 +1136,15 @@
 			path = UILayer;
 			sourceTree = "<group>";
 		};
+		A58222F31CE00E7D000A714A /* TimeBar */ = {
+			isa = PBXGroup;
+			children = (
+				A58222F41CE00E87000A714A /* TimeBar.h */,
+				A58222F51CE00E87000A714A /* TimeBar.m */,
+			);
+			path = TimeBar;
+			sourceTree = "<group>";
+		};
 		A5A191A71C9D3D110056C979 /* Meng final VIC SURV */ = {
 			isa = PBXGroup;
 			children = (
@@ -1325,6 +1337,7 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
+				A58222F31CE00E7D000A714A /* TimeBar */,
 				A53645731CD5DAD7006E1007 /* CreditPanel */,
 				A5AA53F21CC59F5800110B18 /* TutorialLayer */,
 				A5FCA82B1CB5E65300AB27F6 /* SounderManager */,
@@ -1590,7 +1603,6 @@
 				A5394B5F1CB1D93100272141 /* Hurt (1).png in Resources */,
 				A5394B5E1CB1D93100272141 /* Fall (8).png in Resources */,
 				A5394B8E1CB1D93100272141 /* Walk (9).png in Resources */,
-				A536456E1CD59DF7006E1007 /* CrossRed.png in Resources */,
 				A5394B791CB1D93100272141 /* Jump (7).png in Resources */,
 				A5394ACC1CAFB77900272141 /* bottle2.png in Resources */,
 				A5394AF71CB1D6EE00272141 /* trubbish.png in Resources */,
@@ -1718,8 +1730,8 @@
 				A5AA54251CC7894000110B18 /* buttonSelect.wav in Resources */,
 				A55E6ACC1C93DCE5006F0FE5 /* Pentagon.png in Resources */,
 				A57AA7901C9FCA4500F6540A /* green-forest-and-hills-background_PNG.png in Resources */,
-				A53645721CD59DFC006E1007 /* TickGreen.png in Resources */,
 				A5394B5A1CB1D93100272141 /* Fall (4).png in Resources */,
+				A58222F21CDB6239000A714A /* TickGreen_border.png in Resources */,
 				A55E6ACA1C93DCE5006F0FE5 /* Diamond.png in Resources */,
 				A5394B861CB1D93100272141 /* Walk (10).png in Resources */,
 				A53645961CD6DD0A006E1007 /* Default-Landscape~ipad.png in Resources */,
@@ -1733,6 +1745,7 @@
 				A51A8EC61CBF063E00E159EA /* tv.png in Resources */,
 				A5394B761CB1D93100272141 /* Jump (4).png in Resources */,
 				A53645A91CD6DD15006E1007 /* iPhone.png in Resources */,
+				A58222F01CDB6232000A714A /* CrossRed_border.png in Resources */,
 				A5FCA81E1CB5DCA300AB27F6 /* Mister-Sneakypants_Looping.mp3 in Resources */,
 				A5394B871CB1D93100272141 /* Walk (2).png in Resources */,
 				A5A191901C9A345C0056C979 /* bama.png in Resources */,
@@ -1850,6 +1863,7 @@
 				A57AA7931C9FCB5300F6540A /* StageCell.m in Sources */,
 				A55E6B0E1C963EEB006F0FE5 /* MenuScene.m in Sources */,
 				A55E69891C93DAD0006F0FE5 /* GameMainController.m in Sources */,
+				A58222F61CE00E87000A714A /* TimeBar.m in Sources */,
 				A55E6B171C9674D2006F0FE5 /* StageChooseScene.m in Sources */,
 				A55E69821C93DA29006F0FE5 /* StandardObstacle.m in Sources */,
 			);
@@ -2075,7 +2089,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Meng Lin Tsai (D4JS4UGUVN)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2094,7 +2108,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "68221308-05a3-4921-9740-cf325110a829";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2110,7 +2124,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Meng Lin Tsai (D4JS4UGUVN)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2126,7 +2140,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PROVISIONING_PROFILE = "68221308-05a3-4921-9740-cf325110a829";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2138,7 +2152,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Meng Lin Tsai (D4JS4UGUVN)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
@@ -2155,7 +2169,7 @@
 				INFOPLIST_FILE = Source/Resources/Platforms/iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = mh_execute;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-lz",
@@ -2163,7 +2177,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtsa.vicrun2;
 				PRODUCT_NAME = VicRun;
-				PROVISIONING_PROFILE = "68221308-05a3-4921-9740-cf325110a829";
+				PROVISIONING_PROFILE = "";
 				STRIP_STYLE = "non-global";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -2178,7 +2192,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Meng Lin Tsai (D4JS4UGUVN)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
@@ -2194,14 +2208,14 @@
 				INFOPLIST_FILE = Source/Resources/Platforms/iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MACH_O_TYPE = mh_dylib;
+				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.mtsa.vicrun2;
 				PRODUCT_NAME = VicRun;
-				PROVISIONING_PROFILE = "68221308-05a3-4921-9740-cf325110a829";
+				PROVISIONING_PROFILE = "";
 				STRIP_STYLE = "non-global";
 				SWIFT_OBJC_BRIDGING_HEADER = "Source/Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
