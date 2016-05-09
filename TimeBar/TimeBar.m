@@ -43,9 +43,9 @@
 }
 -(void)buildHeadCat
 {
-    catHead = [CCSprite spriteWithImageNamed:@"Slide (1).png"];
+    catHead = [CCSprite spriteWithImageNamed:@"catHead.png"];
     [self addChild:catHead z:1];
-    catHead.scale = (self.contentSize.height/2)/catHead.contentSize.height;
+    catHead.scale = (self.contentSize.height*0.8)/catHead.contentSize.height;
     catHead.position = ccp(0,self.contentSize.height/2);
 }
 @end
