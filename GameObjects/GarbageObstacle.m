@@ -39,6 +39,13 @@
    // self.myView.scale = 1;
     
     self.myView.color = [CCColor whiteColor];
+   // self.rotation = -45;
+    
+    CCActionScaleTo* st1 = [CCActionScaleTo actionWithDuration:0.3 scale:1.05];
+    CCActionScaleTo* st2 = [CCActionScaleTo actionWithDuration:0.3 scale:0.95];
+    CCActionSequence* seq = [CCActionSequence actions:st1,st2, nil];
+    CCActionRepeatForever* fr = [CCActionRepeatForever actionWithAction:seq];
+    [self runAction:fr];
     
 }
 -(BOOL)checkTouched:(CCTouch *)touch
