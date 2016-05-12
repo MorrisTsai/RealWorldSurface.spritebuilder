@@ -79,8 +79,8 @@
         node.anchorPoint = ccp(0.5,0.5);
         [node addChild:tutorial];
         tutorial.position = ccp(node.contentSize.width/2, node.contentSize.height/2);
-        tutorial.scale = self.contentSize.width/tutorial.contentSize.width;
-        tutorial.scale*= 1.05;
+        tutorial.scaleX = self.contentSize.width/tutorial.contentSize.width;
+        tutorial.scaleY = self.contentSize.height/tutorial.contentSize.height;
         [page addObject:node];
         [self addChild:node];
         node.position = ccp(self.contentSize.width/2 + i*node.contentSize.width, self.contentSize.height/2);

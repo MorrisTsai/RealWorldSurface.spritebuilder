@@ -157,7 +157,7 @@
 }
 -(int)creatureConstant
 {
-    return 10;
+    return 5;
 }
 -(int)obstacleConstant
 {
@@ -171,8 +171,9 @@
 }
 -(int)pollutionConstant
 {
+    return 2;
     int returnValue = ((23 - sqrt(min+ max))/2)*1.0 / ((101 - self.waterPercentage)*0.01);
-    returnValue = returnValue > 20 ? returnValue : 20;
+    returnValue = returnValue > 10 ? returnValue : 10;
     return  (self.isGarbageEnable ? returnValue : returnValue / 2);
 }
 -(int)randNumberOfPOllutionNumbers

@@ -60,6 +60,7 @@
             return YES;
         }
     }
+  return NO;
 }
 -(void)nextFrame
 {
